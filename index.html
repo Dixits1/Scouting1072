@@ -1,8 +1,10 @@
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, maximum-scale=2.0">
         <meta charset="utf-8">
         <title>1072 Scouting</title>
 
+        <script src="easy.qrcode.min.js"></script>
         <script src="main.js"></script>
 
         <link rel="stylesheet" href="index.css">
@@ -14,13 +16,6 @@
         <div class="page">
             <span id="header">1072 Scouting</span>
             <div class="content" id="content-landing">
-                <!-- 
-                - scouter name (text input)
-                - match number (number input)
-                - team number (number input)
-
-                - start match button (next button)
-                -->
                 <div class="text-input element">
                     <span>Scouter Intials</span>
                     <input type="text">
@@ -35,12 +30,6 @@
                 </div>
             </div>
             <div class="content" id="content-auton">
-                <!-- 
-                - init line passed (checkbox)
-                - shot grid (img)
-                - human player scored (counter)
-                - brick time (timer)
-                -->
                 <div class="checkbox element">
                     <span>Init Line Passed</span>
                     <input type="checkbox">
@@ -56,13 +45,10 @@
                         <button class="timer-ss timer-stopped" onclick="toggleTimer(this)">Start</button>
                     </div>
                 </div>
+                <div class="field" onclick="addDot(event, this)"></div>
             </div>
             <div class="content" id="content-teleop">
-                <!-- 
-                - shot grid (img)
-                - brick time (timer)
-                - defense time (timer)
-                -->
+                <div class="field" onclick="addDot(event, this)"></div>
                 <div class="timer element">
                     <span>Brick Time</span>
                     <div class="timer-div">
@@ -79,10 +65,6 @@
                 </div>
             </div>
             <div class="content" id="content-endgame">
-                <!-- 
-                - climb time (timer)
-                - climb level (multi-select radios)
-                -->
                 <div class="timer element">
                     <span>Climb Time</span>
                     <div class="timer-div">
@@ -90,16 +72,29 @@
                         <button class="timer-ss timer-stopped" onclick="toggleTimer(this)">Start</button>
                     </div>
                 </div>
+                <div class="radios element">
+                    <span>Climb Level</span>
+                    <input name="climb" type="radio" id="no-climb"> 
+                    <span for="no-climb">No Climb</span>
+                    <input name="climb" type="radio" id="low-climb"> 
+                    <span for="low-climb">Low</span>
+                    <input name="climb" type="radio" id="mid-climb"> 
+                    <span for="mid-climb">Mid</span>
+                    <input name="climb" type="radio" id="high-climb"> 
+                    <span for="high-climb">High</span>
+                    <input name="climb" type="radio" id="traversal-climb"> 
+                    <span for="traversal-climb">Traversal</span>
+                </div>
             </div>
             <div class="content" id="content-comments">
-                <!-- 
-                - comments box
-                -->
+                <div class="text-area element">
+                    <textarea placeholder="Leave comments here..."> </textarea>
+                </div>
             </div>
             <div class="content" id="content-qr">
-                <!-- 
-                - generated qr code
-                -->
+                <div id="qr-div">
+
+                </div>
             </div>
             <div class="footer">
                 <button class="prev-btn nav-btn" onclick="prevPage()">Prev</button>
@@ -108,20 +103,3 @@
         </div>
     </body>
 </html>
-
-<!--
-    Elements to create:
-    - header
-    - text input
-    - timer
-    - checkbox
-    - radio selector
-    - next button
-    - counter
-    - field shot selector
-
-    CSS:
-    - .page
-    - .header
-    - .content
--->

@@ -159,3 +159,34 @@ html, body {
     border-color: rgb(220, 30, 30);
     color: rgb(220, 30, 30);
 }
+
+.field {
+    width: 60vw;
+    height: 30vw;
+    margin-left: 20vw;
+    background-image: url('./field_2022_lines.png');
+    background-size: 60vw;
+
+    display: grid !important;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.field:hover {
+    cursor: pointer;
+}
+
+.text-area textarea {
+    color: #444;
+    font-size: 14px;
+    padding: 8px 10px 8px 10px;
+    width: 40vw;
+    height: 25vw;
+    text-align: left;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    font-family: 'Ubuntu', sans-serif;
+}
