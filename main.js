@@ -1,11 +1,20 @@
 // use raw javacsript without jquery, babel, or any other library
 
+// TODOs:
+// add reset button to climb time
+// auto-start climb timer when page is opened
+// show team numbers as options pulled from TBA instead of user-entered text
+
 HEADERS = ["1072 Scouting", "Auton", "Teleop", "Endgame", "Comments", "QR Code"];
 
 timerIntervals = {"brick-timer": null, "climb-timer": null, "defense-timer": null};
 timerVals = {"brick-timer": 0, "climb-timer": 0, "defense-timer": 0};
 curPage = 0
-fieldLabels = []
+
+curShotPosition = null;
+shotPositions = [];
+shotOutcomes = [];
+numAutonScored = 0;
 
 
 N_COLS = 5;
@@ -14,19 +23,14 @@ N_ROWS = 4;
 
 document.addEventListener("DOMContentLoaded", function(){
     // get all elements with class "content" and hide all but the first one
-    const content = document.getElementsByClassName('content');
+    content = document.getElementsByClassName('content');
 
     for (let i = 1; i < content.length; i++)
         content[i].style.display = 'none';
 
-    for (let i = 0; i < N_ROWS; i++) {
-        fieldLabels[i] = [];
-        for (let j = 0; j < N_COLS; j++)
-            fieldLabels[i][j] = "";
-    }
+    fields = document.getElementsByClassName("field");
 
-    generateQR("testQRCodetextABCDEFG");
-
+    genFieldElements();
 });
 
 function prevPage() {
@@ -40,6 +44,67 @@ function nextPage() {
 
     if(curPage == 1)
         resetForm();
+    
+    if(curPage == 2)
+        numAutonScored = shotPositions.length;
+    
+    if(curPage == 5) {
+        data = getData();
+        
+        // get values from data and store as a comma separated list
+        // if the value is an array, then surround each non-numerical value with single-quotes, otherwise don't 
+        //surround with any single-quotes. then join those values with commas and surround the entire concatenated array
+        // with brackets.
+        let values = [];
+        for(let key in data) {
+            let value = data[key];
+            if(Array.isArray(value)) {
+                let newValue = [];
+                for(let i = 0; i < value.length; i++) {
+                    if(!isNaN(value[i]))
+                        newValue.push(value[i]);
+                    else
+                        newValue.push(`'${value[i]}'`);
+                }
+                value = `[${newValue.join(',')}]`;
+            }
+            values.push(value);
+        }
+
+        // concatenate the values into a single string
+        let dataString = values.join(',');
+    
+        console.log(dataString);
+        
+        generateQR(dataString);
+
+    }
+}
+
+function getData() {
+    let data = {};
+
+    data["match"] = document.getElementById("data-match-number").value;
+    data["team"] = document.getElementById("data-team-number").value;
+    
+    data["locations"] = shotPositions;
+    data["shots"] = shotOutcomes;
+
+    // get the index of the selected radio button for the radios with name of "data-climb-level"
+    let climbLevel = document.querySelector('input[name="data-climb-level"]:checked');
+    data["climb"] = Array.prototype.indexOf.call(climbLevel.parentNode.parentNode.children, climbLevel.parentNode);
+    data["initiationLine"] = document.getElementById("data-initiation-line").checked;
+    data["autonCount"] = numAutonScored;
+    data["humanPlayerScored"] = document.getElementById("data-hp-scored").checked;
+    data["climbTime"] = timerVals["climb-timer"];
+    data["brickTime"] = timerVals["brick-timer"];
+    data["defenseTime"] = timerVals["defense-timer"];
+
+    data["scouterName"] = document.getElementById("data-scouter-name").value;
+
+    data["comments"] = document.getElementById("data-comments").value;
+
+    return data;
 }
 
 
@@ -53,14 +118,29 @@ function updateCurrentPage() {
     const content = document.getElementsByClassName('content');
 
     for (let i = 0; i < content.length; i++) {
-        content[i].style.display = i == curPage ? 'block' : 'none';
+        content[i].style.display = i == curPage ? 'flex' : 'none';
     }
 
     document.getElementById('header').innerHTML = HEADERS[curPage];
 }
 
 function resetForm() {
-// TODO: write this function
+    // uncheck the input with the id of "data-initiation-line"
+    document.getElementById("data-initiation-line").checked = false;
+    // uncheck the input with the id of "data-hp-scored"
+    document.getElementById("data-hp-scored").checked = false;
+
+    // clear all radio button inputs with the name of "data-climb-level"
+    let climbLevels = document.getElementsByName("data-climb-level");
+    for(let i = 0; i < climbLevels.length; i++) {
+        climbLevels[i].checked = false;
+    }
+
+    // clear textarea with id of "data-comments"
+    document.getElementById("data-comments").value = "";
+
+    clearFields();
+    clearTimers();
 }
 
 function toggleTimer(e) {
@@ -123,65 +203,141 @@ function timeToString(time) {
   return `${formattedMM}:${formattedSS}`;
 }
 
-function addDot(e, el) {
+function addShot(e, el) {
+    // e - event
+    // el - element
 
-    fontSize = Math.min(el.offsetWidth / N_COLS, el.offsetHeight / N_ROWS) - 20;
+    let offset = {
+        x: e.clientX - el.getBoundingClientRect().left,
+        y: e.clientY - el.getBoundingClientRect().top
+    };
+    
+    row = Math.floor(offset.y / (el.offsetHeight / (N_ROWS * 1.0))) + 1;
+    col = Math.floor(offset.x / (el.offsetWidth / (N_COLS * 1.0))) + 1;
 
-    newSpan = document.createElement('div');
-    newSpan.classList.add('field-label');
-    newSpan.style.fontSize = fontSize + "px";
-    newSpan.innerHTML = "U";
+    gridArea = `${row} / ${col} / ${row + 1} / ${col + 1}`;
 
-    x = e.offsetX;
-    y = e.offsetY;
-
-    row = Math.floor(y / (el.offsetHeight / (N_ROWS * 1.0))) + 1;
-    col = Math.floor(x / (el.offsetWidth / (N_COLS * 1.0))) + 1;
-
-    // leftMargin = (col * (el.offsetWidth / 5.0)) + (el.offsetWidth / 10.0);
-    // topMargin = (row * (el.offsetHeight / 4.0)) + (el.offsetWidth / 10.0);
-
-    newSpan.style.gridArea = `${row} / ${col} / ${row + 1} / ${col + 1}`;
-
-    el.appendChild(newSpan);
-}
-
-function generateFieldLabels(parent) {
-
-    fontSize = Math.round(Math.min(el.offsetWidth / N_COLS, el.offsetHeight / N_ROWS) * 0.8);
-
-    fieldLabels = [];
-
-    for (let i = 0; i < N_ROWS; i++) {
-        fieldLabels[i] = [];
-        for (let j = 0; j < N_COLS; j++) {
-            let newDiv = document.createElement('div');
-            newDiv.classList.add('field-label');
-            newDiv.style.fontSize = fontSize + "px";
-            newDiv.style.gridArea = `${i + 1} / ${j + 1} / ${i + 2} / ${j + 2}`;
-            newDiv.innerHTML = "";
-
-            fieldLabels[i].push("");
-
-            parent.appendChild(newDiv);
+    fields = document.getElementsByClassName("field");
+    for (let k = 0; k < fields.length; k++) {
+        // iterate over children and see if any of them have the same grid-area as gridArea
+        for (let i = 0; i < fields[k].children.length; i++) {
+            if (fields[k].children[i].style.gridArea == gridArea) {
+                fields[k].children[i].classList.add('field-label-shaded');
+                break;
+            }
         }
-
-        fieldLabels.appendChild(row);
     }
 
-    parent.appendChild(fieldLabels);
+    curShotPosition = (row - 1) * 5 + col;
+    
+    toggleModal();
 }
 
 function generateQR(text) {
 
     var options_object = {
         text: text,
-        width: 400,
-        height: 400,
+        width: getQRSize(),
+        height: getQRSize(),
         colorDark : "#000000",
         colorLight : "#f4f4f4",
         correctLevel : QRCode.CorrectLevel.H
     }
 
     var qrcode = new QRCode(document.getElementById('qr-div'), options_object);
+}
+
+function toggleModal() {
+    document.querySelector(".modal").classList.toggle("show-modal");
+}
+
+function addShotOutcome(el) {
+    shotPositions.push(curShotPosition);
+    shotOutcomes.push(el.innerHTML.toLowerCase()[0]);
+
+    curShotPosition = null;
+
+    toggleModal();
+}
+
+function flipField() {
+    let fields = document.getElementsByClassName("field");
+
+    for (let k = 0; k < fields.length; k++) {
+        fields[k].classList.toggle("field-flipped");
+    }
+}
+
+function clearFields() {
+    let fields = document.getElementsByClassName("field");
+
+    // remove all children from each field
+    for (let k = 0; k < fields.length; k++) {
+        while (fields[k].firstChild) {
+            fields[k].removeChild(fields[k].firstChild);
+        }
+    }
+
+    genFieldElements();
+
+    shotPositions = [];
+    shotOutcomes = [];
+}
+
+function clearTimers() {
+    // set all timerIntervals to null
+    // set all timerVals to 0
+    for (let key in timerIntervals) {
+        timerIntervals[key] = null;
+        timerVals[key] = 0;
+    }
+
+    // set the innerHTML of all elements with the timer-text class to "00:00"
+    let timerTexts = document.getElementsByClassName("timer-text");
+
+    for (let i = 0; i < timerTexts.length; i++) {
+        timerTexts[i].innerHTML = "00:00";
+    }
+}
+
+function genFieldElements() {
+    for(let k = 0; k < fields.length; k++) {
+        for (let i = 0; i < N_ROWS; i++) {
+            for (let j = 0; j < N_COLS; j++) {
+                let newDiv = document.createElement('div');
+                newDiv.style.gridArea = `${i + 1} / ${j + 1} / ${i + 2} / ${j + 2}`;
+                fields[k].appendChild(newDiv);
+            }
+        }
+    }
+}
+
+function undoShot() {
+    let lastShotPos;
+
+    if (shotPositions.length > 0) {
+        lastShotPos = shotPositions.pop();
+        shotOutcomes.pop();
+    }
+
+    fields = document.getElementsByClassName("field");
+
+    // derive the row and col based on lastShotPos
+    row = Math.ceil(lastShotPos / 5);
+    col = lastShotPos % 5 == 0 ? 5 : lastShotPos % 5;
+
+    for (let k = 0; k < fields.length; k++) {
+        // iterate over children and see if any of them have the corresponding grid-area to row and col
+        for (let i = 0; i < fields[k].children.length; i++) {
+            if (fields[k].children[i].style.gridArea == `${row} / ${col} / ${row + 1} / ${col + 1}`) {
+                fields[k].children[i].classList.remove('field-label-shaded');
+                break;
+            }
+        }
+    }
+}
+
+function getQRSize() {
+    // get screen width and height
+    return Math.min(window.innerWidth * 0.9, window.innerHeight * 0.7);
 }

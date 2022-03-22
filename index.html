@@ -17,26 +17,26 @@
             <span id="header">1072 Scouting</span>
             <div class="content" id="content-landing">
                 <div class="text-input element">
-                    <span>Scouter Intials</span>
-                    <input type="text">
+                    <span>Scouter Name</span>
+                    <input type="text" id="data-scouter-name">
                 </div>
                 <div class="text-input element">
                     <span>Match Number</span>
-                    <input type="number">
+                    <input type="number" id="data-match-number">
                 </div>
                 <div class="text-input element">
                     <span>Team Number</span>
-                    <input type="number">
+                    <input type="number" id="data-team-number">
                 </div>
             </div>
             <div class="content" id="content-auton">
                 <div class="checkbox element">
                     <span>Init Line Passed</span>
-                    <input type="checkbox">
+                    <input type="checkbox" id="data-initiation-line">
                 </div> 
                 <div class="checkbox element">
                     <span>Human Player Scored</span>
-                    <input type="checkbox">
+                    <input type="checkbox" id="data-hp-scored">
                 </div>
                 <div class="timer element">
                     <span>Brick Time</span>
@@ -45,10 +45,15 @@
                         <button class="timer-ss timer-stopped" onclick="toggleTimer(this)">Start</button>
                     </div>
                 </div>
-                <div class="field" onclick="addDot(event, this)"></div>
+                <div class="field-div">
+                    <div class="field" onclick="addShot(event, this)"></div>
+                    <div class="field-btns-div">
+                        <button class="undo-btn" onclick="undoShot()">Undo Shot</button>
+                        <button class="flip-btn" onclick="flipField()">Flip Field</button>
+                    </div>
+                </div>
             </div>
             <div class="content" id="content-teleop">
-                <div class="field" onclick="addDot(event, this)"></div>
                 <div class="timer element">
                     <span>Brick Time</span>
                     <div class="timer-div">
@@ -63,6 +68,13 @@
                         <button class="timer-ss timer-stopped" onclick="toggleTimer(this)">Start</button>
                     </div>
                 </div>
+                <div class="field-div">
+                    <div class="field" onclick="addShot(event, this)"></div>
+                    <div class="field-btns-div">
+                        <button class="undo-btn" onclick="undoShot()">Undo Shot</button>
+                        <button class="flip-btn" onclick="flipField()">Flip Field</button>
+                    </div>
+                </div>
             </div>
             <div class="content" id="content-endgame">
                 <div class="timer element">
@@ -74,21 +86,28 @@
                 </div>
                 <div class="radios element">
                     <span>Climb Level</span>
-                    <input name="climb" type="radio" id="no-climb"> 
-                    <span for="no-climb">No Climb</span>
-                    <input name="climb" type="radio" id="low-climb"> 
-                    <span for="low-climb">Low</span>
-                    <input name="climb" type="radio" id="mid-climb"> 
-                    <span for="mid-climb">Mid</span>
-                    <input name="climb" type="radio" id="high-climb"> 
-                    <span for="high-climb">High</span>
-                    <input name="climb" type="radio" id="traversal-climb"> 
-                    <span for="traversal-climb">Traversal</span>
+                    <div class="climb-level-div">
+                        <label>
+                            <input name="data-climb-level" type="radio" id="no-climb">&ensp;No Climb
+                        </label>
+                        <label>
+                            <input name="data-climb-level" type="radio" id="low-climb">&ensp;Low
+                        </label>
+                        <label>
+                            <input name="data-climb-level" type="radio" id="mid-climb">&ensp;Mid
+                        </label>
+                        <label>
+                            <input name="data-climb-level" type="radio" id="high-climb">&ensp;High
+                        </label>
+                        <label>
+                            <input name="data-climb-level" type="radio" id="traversal-climb">&ensp;Traversal
+                        </label>
+                    </div>
                 </div>
             </div>
             <div class="content" id="content-comments">
                 <div class="text-area element">
-                    <textarea placeholder="Leave comments here..."> </textarea>
+                    <textarea id="data-comments" maxlength="200" placeholder="Leave comments here..."></textarea>
                 </div>
             </div>
             <div class="content" id="content-qr">
@@ -99,6 +118,18 @@
             <div class="footer">
                 <button class="prev-btn nav-btn" onclick="prevPage()">Prev</button>
                 <button class="next-btn nav-btn" onclick="nextPage()">Next</button>
+            </div>
+        </div>
+        <div class="modal">
+            <div class="modal-content">
+                <div class="modal-header-div">
+                    <span class="close-button" onclick="toggleModal()">×</span>
+                </div> 
+                <div class="modal-content-div">
+                    <button class="modal-btn" id="missed-btn" onclick="addShotOutcome(this)">Missed</button>
+                    <button class="modal-btn" id="lower-btn" onclick="addShotOutcome(this)">Lower</button>
+                    <button class="modal-btn" id="upper-btn" onclick="addShotOutcome(this)">Upper</button>
+                </div>
             </div>
         </div>
     </body>
