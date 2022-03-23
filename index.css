@@ -329,7 +329,7 @@ html, body {
     flex-direction: row;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) and (orientation: portrait) {
     .field {
         width: 90vw;
         height: 45vw;
@@ -341,6 +341,32 @@ html, body {
 
     .climb-level-div {
         flex-direction: column;
+    }
+
+    .text-area textarea {
+        width: 80vw;
+        height: 40vw;
+    }
+}
+
+@media screen and (max-height: 785px) and (orientation: landscape) {
+    .field {
+        width: 50vw;
+        height: 25vw;
+    }
+
+    .content {
+        gap: 4vh;
+    }
+
+    .climb-level-div {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 600px) and (orientation: landscape) {
+    body {
+        transform: rotate(90 deg);
     }
 }
 
@@ -389,5 +415,5 @@ html, body {
 }
 
 .field-flipped { 
-    transform: rotate(180deg);
+    background-image: url('./field_2022_lines_rotated.png') !important;
 }

@@ -18,6 +18,7 @@ shotPositions = [];
 shotOutcomes = [];
 numAutonScored = 0;
 fieldFlipped = false;
+qrHasBeenGenerated = false;
 
 
 N_COLS = 5;
@@ -36,6 +37,8 @@ document.addEventListener("DOMContentLoaded", function(){
     fields = document.getElementsByClassName("field");
 
     genFieldElements();
+
+    document.getElementById("no-climb").checked = true;
 });
 
 function prevPage() {
@@ -84,6 +87,17 @@ function nextPage() {
         generateQR(dataString);
 
     }
+}
+
+function PosToRowCol(pos) {
+    row = Math.ceil(pos / N_COLS);
+    col = pos % N_COLS == 0 ? N_COLS : pos % N_COLS;
+
+    return {row, col}
+}
+
+function RowColToPos(row, col) {
+    return (row - 1) * N_COLS + col;
 }
 
 function getData() {
@@ -155,8 +169,12 @@ function flipShotsHorizontally(shotPosArr) {
 
 
 function updateCurrentPage() {
-    if (curPage < 0)
-        curPage = HEADERS.length - 1;
+    if (curPage < 0) {
+        if (qrHasBeenGenerated)
+            curPage = HEADERS.length - 1;
+        else
+            curPage = 0;
+    }
 
     if (curPage > HEADERS.length - 1)
         curPage = 0;
@@ -181,6 +199,8 @@ function resetForm() {
     for(let i = 0; i < climbLevels.length; i++) {
         climbLevels[i].checked = false;
     }
+
+    document.getElementById("no-climb").checked = true;
 
     // clear textarea with id of "data-comments"
     document.getElementById("data-comments").value = "";
@@ -274,23 +294,14 @@ function addShot(e, el) {
         }
     }
 
-    curShotPosition = RoWColToPos(row, col);
+    curShotPosition = RowColToPos(row, col);
     
     toggleModal();
 }
 
-function PosToRowCol(pos) {
-    row = Math.ceil(lastShotPos / N_COLS);
-    col = lastShotPos % N_COLS == 0 ? N_COLS : lastShotPos % N_COLS;
-
-    return {row, col}
-}
-
-function RowColToPos(row, col) {
-    return (row - 1) * N_COLS + col;
-}
-
 function generateQR(text) {
+
+    qrHasBeenGenerated = true;
 
     var options_object = {
         text: text,
@@ -301,11 +312,33 @@ function generateQR(text) {
         correctLevel : QRCode.CorrectLevel.H
     }
 
+    while (document.getElementById('qr-div').firstChild) {
+        document.getElementById('qr-div').removeChild(document.getElementById('qr-div').firstChild);
+    }
+
     var qrcode = new QRCode(document.getElementById('qr-div'), options_object);
 }
 
 function toggleModal() {
     document.querySelector(".modal").classList.toggle("show-modal");
+}
+
+function closeModal() {
+    let {row, col} = PosToRowCol(curShotPosition);
+
+    fields = document.getElementsByClassName("field");
+
+    for (let k = 0; k < fields.length; k++) {
+        // iterate over children and see if any of them have the same grid-area as gridArea
+        for (let i = 0; i < fields[k].children.length; i++) {
+            if (fields[k].children[i].style.gridArea == `${row} / ${col} / ${row + 1} / ${col + 1}`) {
+                fields[k].children[i].classList.remove('field-label-shaded');
+                break;
+            }
+        }
+    }
+
+    toggleModal();
 }
 
 function addShotOutcome(el) {
@@ -372,24 +405,22 @@ function genFieldElements() {
 }
 
 function undoShot() {
-    let lastShotPos;
-
     if (shotPositions.length > 0) {
         lastShotPos = shotPositions.pop();
         shotOutcomes.pop();
-    }
 
-    fields = document.getElementsByClassName("field");
+        fields = document.getElementsByClassName("field");
 
-    // derive the row and col based on lastShotPos
-    let {row, col} = PosToRowCol(lastShotPos);
+        // derive the row and col based on lastShotPos
+        let {row, col} = PosToRowCol(lastShotPos);
 
-    for (let k = 0; k < fields.length; k++) {
-        // iterate over children and see if any of them have the corresponding grid-area to row and col
-        for (let i = 0; i < fields[k].children.length; i++) {
-            if (fields[k].children[i].style.gridArea == `${row} / ${col} / ${row + 1} / ${col + 1}`) {
-                fields[k].children[i].classList.remove('field-label-shaded');
-                break;
+        for (let k = 0; k < fields.length; k++) {
+            // iterate over children and see if any of them have the corresponding grid-area to row and col
+            for (let i = 0; i < fields[k].children.length; i++) {
+                if (fields[k].children[i].style.gridArea == `${row} / ${col} / ${row + 1} / ${col + 1}`) {
+                    fields[k].children[i].classList.remove('field-label-shaded');
+                    break;
+                }
             }
         }
     }

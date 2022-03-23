@@ -26,3 +26,7 @@ if __name__ == '__main__':
 
     # Save the image
     image.save("field_2022_lines.png")
+
+    # rotate image 180 degrees
+    image = image.rotate(180)
+    image.save("field_2022_lines_rotated.png")
