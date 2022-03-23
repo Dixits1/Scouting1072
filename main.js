@@ -5,6 +5,8 @@
 // auto-start climb timer when page is opened
 // show team numbers as options pulled from TBA instead of user-entered text
 
+// EVENT_CODE = "2022cada";
+EVENT_CODE = "2022flwp";
 HEADERS = ["1072 Scouting", "Auton", "Teleop", "Endgame", "Comments", "QR Code"];
 
 timerIntervals = {"brick-timer": null, "climb-timer": null, "defense-timer": null};
@@ -15,6 +17,7 @@ curShotPosition = null;
 shotPositions = [];
 shotOutcomes = [];
 numAutonScored = 0;
+fieldFlipped = false;
 
 
 N_COLS = 5;
@@ -22,6 +25,8 @@ N_ROWS = 4;
 
 
 document.addEventListener("DOMContentLoaded", function(){
+    getSchedule(EVENT_CODE);
+
     // get all elements with class "content" and hide all but the first one
     content = document.getElementsByClassName('content');
 
@@ -86,9 +91,15 @@ function getData() {
 
     data["match"] = document.getElementById("data-match-number").value;
     data["team"] = document.getElementById("data-team-number").value;
-    
+    data["teamColor"] = getAllianceColor(data["team"], data["match"]);
+
     data["locations"] = shotPositions;
     data["shots"] = shotOutcomes;
+
+    if (fieldFlipped)
+        data["locations"] = rotateShots180(data["locations"]);
+    if (data["teamColor"] == "red")
+        data["locations"] = flipShotsHorizontally(data["locations"]);
 
     // get the index of the selected radio button for the radios with name of "data-climb-level"
     let climbLevel = document.querySelector('input[name="data-climb-level"]:checked');
@@ -105,6 +116,41 @@ function getData() {
     data["comments"] = document.getElementById("data-comments").value;
 
     return data;
+}
+
+function rotateShots180(shotPosArr) {
+    let newPositions = [];
+
+    for(let i = 0; i < shotPosArr.length; i++) {
+        // get row and col form of shot position
+        let {row, col} = PosToRowCol(shotPosArr[i]);
+
+        // rotate row and col by 180 degrees
+        row = N_ROWS - row;
+        col = N_COLS - col;
+
+        // convert row and col back to position
+        newPositions.push(RowColToPos(row, col));
+    }
+
+    return newPositions;
+}
+
+function flipShotsHorizontally(shotPosArr) {
+    let newPositions = [];
+
+    for(let i = 0; i < shotPosArr.length; i++) {
+        // get row and col form of shot position
+        let {row, col} = PosToRowCol(shotPosArr[i]);
+
+        // flip col
+        col = N_COLS - col;
+
+        // convert row and col back to position
+        newPositions.push(RowColToPos(row, col));
+    }
+
+    return newPositions;
 }
 
 
@@ -228,9 +274,20 @@ function addShot(e, el) {
         }
     }
 
-    curShotPosition = (row - 1) * 5 + col;
+    curShotPosition = RoWColToPos(row, col);
     
     toggleModal();
+}
+
+function PosToRowCol(pos) {
+    row = Math.ceil(lastShotPos / N_COLS);
+    col = lastShotPos % N_COLS == 0 ? N_COLS : lastShotPos % N_COLS;
+
+    return {row, col}
+}
+
+function RowColToPos(row, col) {
+    return (row - 1) * N_COLS + col;
 }
 
 function generateQR(text) {
@@ -266,6 +323,8 @@ function flipField() {
     for (let k = 0; k < fields.length; k++) {
         fields[k].classList.toggle("field-flipped");
     }
+
+    fieldFlipped = !fieldFlipped;
 }
 
 function clearFields() {
@@ -323,8 +382,7 @@ function undoShot() {
     fields = document.getElementsByClassName("field");
 
     // derive the row and col based on lastShotPos
-    row = Math.ceil(lastShotPos / 5);
-    col = lastShotPos % 5 == 0 ? 5 : lastShotPos % 5;
+    let {row, col} = PosToRowCol(lastShotPos);
 
     for (let k = 0; k < fields.length; k++) {
         // iterate over children and see if any of them have the corresponding grid-area to row and col
@@ -340,4 +398,46 @@ function undoShot() {
 function getQRSize() {
     // get screen width and height
     return Math.min(window.innerWidth * 0.9, window.innerHeight * 0.7);
+}
+
+function updateTeams() {
+    // get match id from element with id of "data-match-number"
+    matchNum = document.getElementById("data-match-number").value;
+
+    if (schedule) {
+        // get item in schedule list with the attribute "key" of EVENT_CODE + "_qm" + matchNum
+        match = schedule.find(item => item.key == EVENT_CODE + "_qm" + matchNum);
+
+        if (match) {
+            blueTeam = match.alliances.blue.team_keys.map(x => x.substring(3));
+            redTeam = match.alliances.red.team_keys.map(x => x.substring(3));
+
+            // create radio buttons for the red team selections and blue team selections
+            // make textfield uneditable if radio buttons are selected
+        }
+        else {
+            document.getElementById("data-match-number").value = "";
+        }
+    }
+}
+
+function getAllianceColor(teamNum, matchNum) {
+    if (schedule) {
+        match = schedule.find(item => item.key == EVENT_CODE + "_qm" + matchNum);
+
+        if (match) {
+            blueTeam =  match.alliances.blue.team_keys.map(x => x.substring(3));
+            redTeam =  match.alliances.red.team_keys.map(x => x.substring(3));
+
+            if (blueTeam.includes(teamNum)) {
+                return "blue";
+            }
+            else if (redTeam.includes(teamNum)) {
+                return "red";
+            }
+        }
+    }
+
+    return "N/A";
+
 }

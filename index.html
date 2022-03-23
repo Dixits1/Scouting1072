@@ -5,6 +5,7 @@
         <title>1072 Scouting</title>
 
         <script src="easy.qrcode.min.js"></script>
+        <script src="TBAInterface.js"></script>
         <script src="main.js"></script>
 
         <link rel="stylesheet" href="index.css">
@@ -22,7 +23,7 @@
                 </div>
                 <div class="text-input element">
                     <span>Match Number</span>
-                    <input type="number" id="data-match-number">
+                    <input type="number" id="data-match-number" onkeyup="updateTeams()">
                 </div>
                 <div class="text-input element">
                     <span>Team Number</span>
