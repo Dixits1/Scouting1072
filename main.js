@@ -156,7 +156,10 @@ function stopAllTimers() {
 
     // set all values in timerIntervals to null
     for(let key in timerIntervals) {
-        timerIntervals[key] = null;
+        if (timerIntervals[key] != null) {
+            clearInterval(timerIntervals[key]);
+            timerIntervals[key] = null;
+        }
     }
 }
 
