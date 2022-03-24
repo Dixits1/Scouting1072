@@ -39,6 +39,42 @@ document.addEventListener("DOMContentLoaded", function(){
     genFieldElements();
 
     document.getElementById("no-climb").checked = true;
+
+    const interval = setInterval(function() {
+        // in qr-div, get the index of the child which has the style of display set to "block"
+        let qrDiv = document.getElementById("qr-div");
+        let nQRs = qrDiv.children.length;
+
+        console.log(nQRs);
+
+        if (nQRs > 1) {
+            let qrIndex = 0;
+
+            for(let i = 0; i < nQRs; i++) {
+                if(!qrDiv.children[i].classList.contains("hidden")) {
+                    qrIndex = i;
+                    break;
+                }
+            }
+
+            console.log(qrIndex);
+
+            if (qrIndex < nQRs - 1) {
+                // set the style of the current QR code to hidden
+                qrDiv.children[qrIndex].classList.add("hidden");
+
+                qrDiv.children[qrIndex + 1].classList.remove("hidden");
+            }
+            else {
+                qrDiv.children[qrIndex].classList.add("hidden");
+
+                qrDiv.children[0].classList.remove("hidden");
+            }
+        }
+        else if (nQRs == 1) {
+            qrDiv.children[0].classList.remove("hidden");
+        }
+      }, 500);
 });
 
 function prevPage() {
@@ -72,7 +108,7 @@ function nextPage() {
                     if(!isNaN(value[i]))
                         newValue.push(value[i]);
                     else
-                        newValue.push(`'${value[i]}'`);
+                        newValue.push(`${value[i]}`);
                 }
                 value = `[${newValue.join(',')}]`;
             }
@@ -81,11 +117,21 @@ function nextPage() {
 
         // concatenate the values into a single string
         let dataString = values.join(',');
-    
-        console.log(dataString);
         
-        generateQR(dataString);
+        while (document.getElementById('qr-div').firstChild) {
+            document.getElementById('qr-div').removeChild(document.getElementById('qr-div').firstChild);
+        }
 
+        // split dataString into chunks of length 40
+        for(let i = 0; i < dataString.length; i += 40) {
+            generateQR(i + "C" + dataString.length + "L" + dataString.substring(i, i + 40));
+        }
+
+        // add the "hidden" class to all children of the qr-div
+        let qrDiv = document.getElementById("qr-div");
+        for(let i = 1; i < qrDiv.children.length; i++) {
+            qrDiv.children[i].classList.add("hidden");
+        }
     }
 }
 
@@ -310,10 +356,6 @@ function generateQR(text) {
         colorDark : "#000000",
         colorLight : "#f4f4f4",
         correctLevel : QRCode.CorrectLevel.H
-    }
-
-    while (document.getElementById('qr-div').firstChild) {
-        document.getElementById('qr-div').removeChild(document.getElementById('qr-div').firstChild);
     }
 
     var qrcode = new QRCode(document.getElementById('qr-div'), options_object);

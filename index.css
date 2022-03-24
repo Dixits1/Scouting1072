@@ -417,3 +417,7 @@ html, body {
 .field-flipped { 
     background-image: url('./field_2022_lines_rotated.png') !important;
 }
+
+.hidden {
+    display: none;
+}
