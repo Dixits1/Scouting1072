@@ -45,8 +45,6 @@ document.addEventListener("DOMContentLoaded", function(){
         let qrDiv = document.getElementById("qr-div");
         let nQRs = qrDiv.children.length;
 
-        console.log(nQRs);
-
         if (nQRs > 1) {
             let qrIndex = 0;
 
@@ -56,8 +54,6 @@ document.addEventListener("DOMContentLoaded", function(){
                     break;
                 }
             }
-
-            console.log(qrIndex);
 
             if (qrIndex < nQRs - 1) {
                 // set the style of the current QR code to hidden
@@ -80,11 +76,15 @@ document.addEventListener("DOMContentLoaded", function(){
 function prevPage() {
     curPage--;
     updateCurrentPage();
+
+    stopAllTimers();
 }
 
 function nextPage() {
     curPage++;
     updateCurrentPage();
+
+    stopAllTimers();
 
     if(curPage == 1)
         resetForm();
@@ -108,7 +108,7 @@ function nextPage() {
                     if(!isNaN(value[i]))
                         newValue.push(value[i]);
                     else
-                        newValue.push(`${value[i]}`);
+                        newValue.push(`'${value[i]}'`);
                 }
                 value = `[${newValue.join(',')}]`;
             }
@@ -117,6 +117,8 @@ function nextPage() {
 
         // concatenate the values into a single string
         let dataString = values.join(',');
+
+        console.log(dataString);
         
         while (document.getElementById('qr-div').firstChild) {
             document.getElementById('qr-div').removeChild(document.getElementById('qr-div').firstChild);
@@ -137,6 +139,18 @@ function nextPage() {
         let qrDiv = document.getElementById("qr-div");
         for(let i = 1; i < qrDiv.children.length; i++) {
             qrDiv.children[i].classList.add("hidden");
+        }
+    }
+}
+
+function stopAllTimers() {
+    // get all timer elements
+    let timers = document.getElementsByClassName("timer-ss");
+
+    // stop all timers
+    for(let i = 0; i < timers.length; i++) {
+        if (timers[i].classList.contains("timer-running")) {
+            toggleTimer(timers[i]);
         }
     }
 }
@@ -173,9 +187,9 @@ function getData() {
     data["initiationLine"] = document.getElementById("data-initiation-line").checked;
     data["autonCount"] = numAutonScored;
     data["humanPlayerScored"] = document.getElementById("data-hp-scored").checked;
-    data["climbTime"] = timerVals["climb-timer"];
-    data["brickTime"] = timerVals["brick-timer"];
-    data["defenseTime"] = timerVals["defense-timer"];
+    data["climbTime"] = Math.trunc(timerVals["climb-timer"] / 1000.0);
+    data["brickTime"] = Math.trunc(timerVals["brick-timer"] / 1000.0);
+    data["defenseTime"] = Math.trunc(timerVals["defense-timer"] / 1000.0);
 
     data["scouterName"] = document.getElementById("data-scouter-name").value;
 
@@ -192,8 +206,8 @@ function rotateShots180(shotPosArr) {
         let {row, col} = PosToRowCol(shotPosArr[i]);
 
         // rotate row and col by 180 degrees
-        row = N_ROWS - row;
-        col = N_COLS - col;
+        row = N_ROWS - (row - 1);
+        col = N_COLS - (col - 1);
 
         // convert row and col back to position
         newPositions.push(RowColToPos(row, col));

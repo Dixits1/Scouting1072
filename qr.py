@@ -38,8 +38,8 @@ while True:
 
             curQR[QRidx] = lPieces[1]
 
-        print(curQR)
-        print(data)
+        # print(curQR)
+        # print(data)
 
         if all(curQR):
             qr = "".join(curQR)
