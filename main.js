@@ -5,8 +5,8 @@
 // auto-start climb timer when page is opened
 // show team numbers as options pulled from TBA instead of user-entered text
 
-EVENT_CODE = "2022cada";
-// EVENT_CODE = "2022flwp";
+// EVENT_CODE = "2022cada";
+EVENT_CODE = "2022flwp";
 HEADERS = ["1072 Scouting", "Auton", "Teleop", "Endgame", "Comments", "QR Code"];
 
 timerIntervals = {"brick-timer": null, "climb-timer": null, "defense-timer": null};
@@ -149,9 +149,14 @@ function stopAllTimers() {
 
     // stop all timers
     for(let i = 0; i < timers.length; i++) {
-        if (timers[i].classList.contains("timer-running")) {
-            toggleTimer(timers[i]);
-        }
+        timers[i].classList.remove('timer-running');
+        timers[i].classList.add('timer-stopped');
+        timers[i].innerHTML = "Start";
+    }
+
+    // set all values in timerIntervals to null
+    for(let key in timerIntervals) {
+        timerIntervals[key] = null;
     }
 }
 
@@ -290,6 +295,7 @@ function toggleTimer(e) {
     }
 
     if(e.classList.contains('timer-stopped')) {
+        stopAllTimers();
         e.classList.add('timer-running');
         e.classList.remove('timer-stopped');
         e.innerHTML = "Stop";
@@ -310,7 +316,9 @@ function toggleTimer(e) {
         e.classList.add('timer-stopped');
         e.innerHTML = "Start";
         
-        timerIntervals[timerName] = clearInterval(timerIntervals[timerName]);
+        clearInterval(timerIntervals[timerName])
+
+        timerIntervals[timerName] = null;
     }
 }
 
