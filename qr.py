@@ -1,6 +1,6 @@
 
 import cv2
-import csv
+import os
 
 
 cap = cv2.VideoCapture(0)
@@ -49,6 +49,11 @@ while True:
             if qr[-1] != ',':
                 qr += ','
 
+            # if the file with the name qr.csv doesn't exist, create an empty file
+            if not os.path.isfile('qr.csv'):
+                with open('qr.csv', 'w') as f:
+                    f.write('')
+
             # open file for writing and reading
             with open('qr.csv', 'r+') as csvfile:
                 # split file into lines by \n
@@ -64,13 +69,6 @@ while True:
                     print("QR code added to file")
 
             curQR = []
-
-        
-        
-
-    # if bbox is not None:
-    #     # save image to a file named "frame.jpg"
-    #     cv2.imwrite("frame.jpg", img)
 
     if cv2.waitKey(1) == ord("q"):
         break

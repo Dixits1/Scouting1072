@@ -450,6 +450,9 @@ function clearTimers() {
     // set all timerIntervals to null
     // set all timerVals to 0
     for (let key in timerIntervals) {
+        if (timerIntervals[key] != null) {
+            clearInterval(timerIntervals[key]);
+        }
         timerIntervals[key] = null;
         timerVals[key] = 0;
     }
