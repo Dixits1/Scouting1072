@@ -122,9 +122,15 @@ function nextPage() {
             document.getElementById('qr-div').removeChild(document.getElementById('qr-div').firstChild);
         }
 
+        let chunks = []
+
         // split dataString into chunks of length 40
         for(let i = 0; i < dataString.length; i += 20) {
-            generateQR(i + "C" + dataString.length + "L" + dataString.substring(i, i + 20));
+            chunks.push(dataString.substring(i, i + 20));
+        }
+
+        for(let i = 0; i < chunks.length; i++) {
+            generateQR(i + "C" + chunks.length + "L" + chunks[i]);
         }
 
         // add the "hidden" class to all children of the qr-div
