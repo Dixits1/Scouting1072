@@ -8,6 +8,7 @@
 // EVENT_CODE = "2022cada";
 EVENT_CODE = "2022flwp";
 HEADERS = ["1072 Scouting", "Auton", "Teleop", "Endgame", "Comments", "QR Code"];
+ARRAY_DELIM = "|";
 
 timerIntervals = {"brick-timer": null, "climb-timer": null, "defense-timer": null};
 timerVals = {"brick-timer": 0, "climb-timer": 0, "defense-timer": 0};
@@ -110,7 +111,7 @@ function nextPage() {
                     else
                         newValue.push(`'${value[i]}'`);
                 }
-                value = `[${newValue.join(',')}]`;
+                value = `[${newValue.join(ARRAY_DELIM)}]`;
             }
             values.push(value);
         }
@@ -184,10 +185,13 @@ function getData() {
     data["locations"] = shotPositions;
     data["shots"] = shotOutcomes;
 
-    if (fieldFlipped)
-        data["locations"] = rotateShots180(data["locations"]);
-    if (data["teamColor"] == "red")
-        data["locations"] = flipShotsHorizontally(data["locations"]);
+    if ((fieldFlipped && data["teamColor"] == "blue") || (!fieldFlipped && data["teamColor"] == "red")) {
+        flippedLocations = []
+        for (let i = 0; i < data["locations"].length; i++) {
+            flippedLocations.push(20 - data["locations"][i] + 1);
+        }
+        data["locations"] = flippedLocations;
+    }
 
     // get the index of the selected radio button for the radios with name of "data-climb-level"
     let climbLevel = document.querySelector('input[name="data-climb-level"]:checked');
@@ -206,40 +210,40 @@ function getData() {
     return data;
 }
 
-function rotateShots180(shotPosArr) {
-    let newPositions = [];
+// function rotateShots180(shotPosArr) {
+//     let newPositions = [];
 
-    for(let i = 0; i < shotPosArr.length; i++) {
-        // get row and col form of shot position
-        let {row, col} = PosToRowCol(shotPosArr[i]);
+//     for(let i = 0; i < shotPosArr.length; i++) {
+//         // get row and col form of shot position
+//         let {row, col} = PosToRowCol(shotPosArr[i]);
 
-        // rotate row and col by 180 degrees
-        row = N_ROWS - (row - 1);
-        col = N_COLS - (col - 1);
+//         // rotate row and col by 180 degrees
+//         row = N_ROWS - (row - 1);
+//         col = N_COLS - (col - 1);
 
-        // convert row and col back to position
-        newPositions.push(RowColToPos(row, col));
-    }
+//         // convert row and col back to position
+//         newPositions.push(RowColToPos(row, col));
+//     }
 
-    return newPositions;
-}
+//     return newPositions;
+// }
 
-function flipShotsHorizontally(shotPosArr) {
-    let newPositions = [];
+// function flipShotsHorizontally(shotPosArr) {
+//     let newPositions = [];
 
-    for(let i = 0; i < shotPosArr.length; i++) {
-        // get row and col form of shot position
-        let {row, col} = PosToRowCol(shotPosArr[i]);
+//     for(let i = 0; i < shotPosArr.length; i++) {
+//         // get row and col form of shot position
+//         let {row, col} = PosToRowCol(shotPosArr[i]);
 
-        // flip col
-        col = N_COLS - col;
+//         // flip col
+//         col = N_COLS - (col - 1);
 
-        // convert row and col back to position
-        newPositions.push(RowColToPos(row, col));
-    }
+//         // convert row and col back to position
+//         newPositions.push(RowColToPos(row, col));
+//     }
 
-    return newPositions;
-}
+//     return newPositions;
+// }
 
 
 function updateCurrentPage() {
