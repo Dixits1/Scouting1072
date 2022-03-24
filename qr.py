@@ -1,5 +1,6 @@
 
 import cv2
+import csv
 
 
 cap = cv2.VideoCapture(0)
@@ -9,6 +10,7 @@ detector = cv2.QRCodeDetector()
 curQR = []
 nQRs = 1
 QRidx = 0
+
 
 
 
@@ -44,7 +46,23 @@ while True:
         if all(curQR):
             qr = "".join(curQR)
 
-            print(qr)
+            if qr[-1] != ',':
+                qr += ','
+
+            # open file for writing and reading
+            with open('qr.csv', 'r+') as csvfile:
+                # split file into lines by \n
+                lines = csvfile.readlines()
+                for i in range(len(lines)):
+                    if lines[i].endswith('\n'):
+                        lines[i] = lines[i][:-1]
+
+                # check if the qr code is already in the file
+                if qr not in lines:
+                    # write the qr code to the file
+                    csvfile.write(qr + '\n')
+                    print("QR code added to file")
+
             curQR = []
 
         

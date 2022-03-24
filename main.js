@@ -5,8 +5,8 @@
 // auto-start climb timer when page is opened
 // show team numbers as options pulled from TBA instead of user-entered text
 
-// EVENT_CODE = "2022cada";
-EVENT_CODE = "2022flwp";
+EVENT_CODE = "2022cada";
+// EVENT_CODE = "2022flwp";
 HEADERS = ["1072 Scouting", "Auton", "Teleop", "Endgame", "Comments", "QR Code"];
 
 timerIntervals = {"brick-timer": null, "climb-timer": null, "defense-timer": null};
