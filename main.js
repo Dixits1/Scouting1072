@@ -8,6 +8,8 @@
 // EVENT_CODE = "2022cada";
 EVENT_CODE = "2022flwp";
 HEADERS = ["1072 Scouting", "Auton", "Teleop", "Endgame", "Comments", "QR Code"];
+DELIMITER = "|";
+
 
 timerIntervals = {"brick-timer": null, "climb-timer": null, "defense-timer": null};
 timerVals = {"brick-timer": 0, "climb-timer": 0, "defense-timer": 0};
@@ -116,7 +118,7 @@ function nextPage() {
         }
 
         // concatenate the values into a single string
-        let dataString = values.join(',');
+        let dataString = values.join(DELIMITER);
 
         console.log(dataString);
         

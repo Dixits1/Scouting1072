@@ -1,7 +1,12 @@
 
+from cgi import test
 import cv2
 import os
+import pandas as pd
 
+
+DELIMITER = "|"
+LINE_SEP = "\n"
 
 cap = cv2.VideoCapture(0)
 # initialize the cv2 QRCode detector
@@ -46,8 +51,8 @@ while True:
         if all(curQR):
             qr = "".join(curQR)
 
-            if qr[-1] != ',':
-                qr += ','
+            if qr[-1] != DELIMITER:
+                qr += DELIMITER
 
             # if the file with the name qr.csv doesn't exist, create an empty file
             if not os.path.isfile('qr.csv'):
@@ -59,14 +64,20 @@ while True:
                 # split file into lines by \n
                 lines = csvfile.readlines()
                 for i in range(len(lines)):
-                    if lines[i].endswith('\n'):
+                    if lines[i].endswith(LINE_SEP):
                         lines[i] = lines[i][:-1]
 
                 # check if the qr code is already in the file
                 if qr not in lines:
                     # write the qr code to the file
-                    csvfile.write(qr + '\n')
+                    csvfile.write(qr + LINE_SEP)
+
+                    df = pd.read_csv('qr.csv', sep=DELIMITER)
+                    xl = pd.ExcelWriter('qr.xlsx')
+                    df.to_excel(xl, index=False)
+
                     print("QR code added to file")
+                    
 
             curQR = []
 
