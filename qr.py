@@ -20,17 +20,17 @@ while True:
     # check if there is a QRCode in the image
     if data != "":
         if len(curQR) == 0:
-            QRidx = data.split("C", 1)[0]
+            QRidx = int(data.split("C", 1)[0])
             data = data.split("C", 1)[1]
-            nQRs = data.split("L", 1)[0]
+            nQRs = int(data.split("L", 1)[0])
             curQR = [None] * int(nQRs)
 
             curQR[QRidx] = data.split("L", 1)[1]
 
         else:
-            QRidx = data.split("C", 1)[0]
+            QRidx = int(data.split("C", 1)[0])
             data = data.split("C", 1)[1]
-            nQRsCur = data.split("L", 1)[0]
+            nQRsCur = int(data.split("L", 1)[0])
 
             curQR[QRidx] = data.split("L", 1)[1]
 

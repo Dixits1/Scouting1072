@@ -123,8 +123,8 @@ function nextPage() {
         }
 
         // split dataString into chunks of length 40
-        for(let i = 0; i < dataString.length; i += 40) {
-            generateQR(i + "C" + dataString.length + "L" + dataString.substring(i, i + 40));
+        for(let i = 0; i < dataString.length; i += 20) {
+            generateQR(i + "C" + dataString.length + "L" + dataString.substring(i, i + 20));
         }
 
         // add the "hidden" class to all children of the qr-div
