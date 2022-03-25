@@ -6,7 +6,7 @@
 // show team numbers as options pulled from TBA instead of user-entered text
 
 // EVENT_CODE = "2022cada";
-EVENT_CODE = "2022flwp";
+EVENT_CODE = "2022cada";
 HEADERS = ["1072 Scouting", "Auton", "Teleop", "Endgame", "Comments", "QR Code"];
 ARRAY_DELIM = "|";
 
