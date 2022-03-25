@@ -242,3 +242,108 @@
 33,3598,red,[8|3|9|18|12|12|12|12|7],['l'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'m'],2,true,1,false,53,0,0,Sophia Z,Climb took around 10 seconds less. 
 33,7419,blue,[17|12|17|12|7|7],['u'|'m'|'u'|'u'|'m'|'l'],3,true,0,false,23,0,0,Deeya,very good suction for cargo  fairly accurate  successful climb 
 33,6619,red,[13|12|13|13],['l'|'l'|'l'|'l'],0,false,0,false,0,0,0,Charlie,had a bit of trouble picking up balls but other than that it was alright 
+34,1458,red,[13],['l'],0,true,1,false,0,0,96,ethan,very good defense and high mobility defended well with 2367 
+34,3669,red,[7],['m'],4,true,1,false,50,7,0,Ada,Bricked briefly a couple times. Really bad at shooting. Very steady climb  though: almost no swinging 
+34,1662,blue,[17|17|7|7],['u'|'u'|'u'|'u'],1,true,1,false,41,0,13,Sathvik Chundru,
+34,1458,red,[13],['l'],0,false,1,false,0,0,91,Charlie,spent all of the time defending  worked a nice double team strategy with the other red robot 
+34,2551,N/A,[13|13|13|13|8|8|13|13|13|13|13|13],['u'|'m'|'u'|'m'|'u'|'u'|'u'|'u'|'m'|'u'|'u'|'u'],3,true,2,false,9,0,0,sania gupta,slipped on high rung but still held on with one hook. fast and smooth driving. consistent high angle shooting into upper hub 
+34,3257,blue,[12|7|12|12|7],['m'|'u'|'u'|'m'|'u'],0,true,1,false,0,0,0,Deeya,driving was choppy and picked up cargo fairly easily and did not attempt climb and missed quite a few shots (upper and lower) usually got one in and missed the other 
+34,2367,red,[8],['u'],0,true,1,false,9,0,23,Sophia Z,At the beginning of teleop  the robot got 2 balls but did not shoot them (maybe a problem with shooter). The robot spent the rest of the match defending against other robots. 
+34,3257,blue,[17|12|12|7|3|12|12|12|12|12|7],['m'|'u'|'m'|'u'|'m'|'u'|'u'|'m'|'m'|'m'|'u'],0,true,1,false,0,0,0,Adheet,high top speed  average driver 
+35,8404,blue,[7|8|7|7|13|12],['u'|'u'|'u'|'u'|'u'|'m'],0,true,1,false,0,0,0,Deeya,pretty good did not attempt climb easily picked up cargo made most shots fairly fast 
+35,299,red,[8|13],['u'|'m'],0,false,2,false,0,0,0,Charlie,clean shots 
+35,687,red,[],[],1,true,0,false,9,0,119,Ada, fast bot  plays good defense  
+35,2204,blue,[7],['l'],0,true,1,false,0,0,147,Sathvik Chundru,
+35,2204,blue,[8|7],['l'|'m'],0,true,1,false,0,0,110,Adheet,aggressive defense  but quite a bit of friendly fire too  has potential to be a good defense bot 
+35,1160,blue,[18|18|4|7|7|7],['u'|'u'|'m'|'u'|'u'|'u'],2,true,2,false,7,0,0,sania gupta,barely made climb in time. pretty good shooting but went against difficult defense 
+35,5700,red,[13|13|13|13|13|13|13|8|8|13|13|13|13],['u'|'l'|'l'|'l'|'l'|'l'|'l'|'l'|'l'|'l'|'l'|'l'|'l'],2,true,1,false,17,0,0,Sophia Z,Robot only shot balls into lower goal in hub.  
+36,4643,blue,[3|3|3|3|3|3|7],['m'|'m'|'m'|'u'|'u'|'u'|'m'],0,true,0,false,0,0,7,Brendon Hayes,Missed most of their shots and didn’t climb 
+36,6918,N/A,[9|9|14|13|13|13],['m'|'m'|'u'|'m'|'u'|'u'],0,true,0,false,0,2,0,Saanvi,No climb  missed multiple shots 
+36,1072,red,[18|12|7|7|7|4|7|7|7|4],['m'|'u'|'u'|'u'|'u'|'u'|'m'|'u'|'u'|'u'],0,true,2,false,0,0,0,Sathvik Chundru,
+36,5274,blue,[],[],2,false,0,false,5,76,0,laurie jin,bricked and then unbricked and then spun. tried to defend 1072 (a fantastic team) but didnt do great. then died rip lol L funny 
+36,5274,blue,[],[],1,false,0,false,0,43,71,aimee,bricked for abt 30 seconds at beginning of match and then tried to do defense but just drove in a lot of circles  
+36,2035,red,[7|7|3|3|12|7|4|7],['u'|'m'|'m'|'m'|'m'|'m'|'m'|'m'],2,true,2,false,3,10,0,Michael Tran,p slow cycles and shooter was p bad. not great overall 
+36,5419,blue,[12|12|17|17|17|12|12|3|3|3|9|9|9|9|3|3],['u'|'u'|'u'|'m'|'u'|'u'|'u'|'m'|'u'|'u'|'m'|'u'|'u'|'u'|'u'|'u'],3,true,2,false,21,0,0,Elena,
+37,7157,blue,[7|8|2|2|4|12|12|4|4|4|4|11|11|2|2|17|17],['m'|'u'|'u'|'u'|'u'|'u'|'m'|'u'|'u'|'u'|'u'|'u'|'m'|'u'|'m'|'u'|'u'],0,true,2,false,0,0,0,aimee,really great driving and shooting  would shoot while moving sometimes which would cause them to miss but overall very good 
+37,1678,blue,[12|12|12|12|12|12|12|17|17|18|18|14|14|18|18|18|18|12|12|12|12|7|7],['u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'],4,true,3,false,6,0,0,Elena,didn't miss a single shot fast cycles and friving 6 second traversal 
+37,5728,red,[],[],0,true,0,false,0,0,121,Sathvik Chundru,
+37,2288,blue,[],[],2,false,0,false,0,0,108,Brendon Hayes,Played a lot of defense and not much else  doesn’t have auton coded 
+37,5278,N/A,[],[],0,true,0,false,0,0,0,laurie jin,bad / basically no auton picked up like 1 ball during match. 5728 is not a fan of balls. played shitty defense the entire time lol  
+37,751,red,[7|7|7|7|7|7|7|12|12],['m'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'],2,true,0,false,17,0,0,Shahzeb Lakhani,Pretty solid. Auto was just moving back. Their shot was really slow to load but was pretty accurate. They always shot from the same spot. Interesting to keep an eye on. 
+37,973,N/A,[3|4|4|4|2|7|7|4|4|2|7|3|9|9|9|17|18|12|7|11|9],['u'|'u'|'u'|'m'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'m'|'m'|'u'],3,true,4,false,5,0,0,Saanvi,973 performed very well again. 2288 was blocking 973 at times 
+37,2288,blue,[12|12|12|12],['u'|'u'|'u'|'u'],2,false,0,false,9,0,77,Michael Tran,p good effort. they looked p decent and sharp offensively but spent most of the match playing defense on 973. they did a decent job at bothering some shots but arent able to follow as well as like 687 
+38,4904,blue,[12|3],['u'|'u'],0,true,1,false,0,1,43,Brendon Hayes,Played defense to protect 254 and was scuffed for a bit 
+38,6619,blue,[],[],0,true,0,false,0,98,0,aimee,bricked right after auton  got unstuck by a team member and then got themselves stuck again for the rest of the round 
+38,7137,N/A,[12|12|3|7|7|14],['m'|'m'|'m'|'m'|'m'|'l'],0,true,1,false,0,0,0,Saanvi,Missed almost every shot  spent a lot of time picking up cargo 
+38,7539,red,[7|7|7],['u'|'u'|'m'],0,true,1,false,106,0,0,Shahzeb Lakhani,Uhhh moved from the starting line and shot a ball. Then just grabbed two and shot pretty slowly. Proceeded to fail climb for the rest of the time. 
+38,4904,blue,[7],['m'],0,true,0,false,0,0,0,laurie jin,dnp - auton doesnt exist. spent a majority of the beginning looking like a lost child. then decided to try for defense butbthey did bad. driver not fun. seem good intentioned tho like a lost freshman 
+38,254,blue,[18|18|12|12|12|19|19|9|9|12|3|3|2|2|7|7|12|4|4|4|4|9|9|9|9|14|12|12|12|18|17],['u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'],2,true,5,false,46,0,0,Elena,no shots missed super fast cycles missed traversal 
+38,8033,N/A,[17|17|12|11|9|4|4|7|18|18|19|12|12|2],['u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'m'|'u'],0,true,2,false,0,0,0,Sathvik Chundru,
+38,8033,red,[18|18|17|17|7|7|9|9|9|4|4|7|7|18|18|18|18|18|7|7|7],['u'|'u'|'u'|'m'|'m'|'u'|'m'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'m'|'u'|'u'|'u'],0,true,2,false,0,0,0,Michael Tran,speedy bot but not as quick cycles as they could have been. p decent accuracy as well but also not perfect. got off about 3 cycles in endgame but a few cycles in the match were just one ball.  
+39,6662,blue,[12],['m'],0,true,0,false,0,91,25,Brendon Hayes,Played defense  then broke when it ran into the hub and stayed bricked  
+39,766,blue,[16],['m'],4,true,0,false,25,0,0,aimee,shooting wasn’t great but they seemed to have a pretty reliable high traversal  
+39,3257,N/A,[7|7|7|7|12|2|2|7|7|2],['m'|'m'|'u'|'u'|'u'|'m'|'m'|'u'|'u'|'l'],0,true,0,false,0,5,0,Saanvi,They mainly tried to shoot from only one area where they seemed to have a higher accuracy than other areas on the field 
+39,1836,red,[],[],4,true,0,false,0,0,53,Sathvik,
+39,7419,red,[12|7|7|7|7|2|2|7|7|2],['u'|'u'|'u'|'u'|'u'|'m'|'m'|'u'|'u'|'l'],0,true,1,false,5,0,0,Shahzeb Lakhani,Interesting bot. Very wobbly. Decent shot from the same locations. Climb seems unpredictable. Also  intake is super small and often misses the ball  wasting time. 
+39,766,blue,[17|12],['m'|'m'],4,true,1,false,29,0,0,Michael Tran,intook like 2 balls and just didn’t shoot and roamed around for like most of teleop (not defense either). went to climb with a min left and got traversal by the time endgame started 
+39,1836,red,[8],['u'],4,true,1,false,25,0,0,laurie jin,p good. auton mneh. played defense and took 2 of blue's balls which wqs rly funny. 1836 is a fan of blue balls. climb good. longish 
+39,2551,blue,[7|7|7|7|7|7|7|13|13],['u'|'u'|'u'|'u'|'m'|'m'|'u'|'m'|'u'],3,true,2,false,17,0,0,Elena,lack of shots and missed shots mostly due to defense from other alliance overall pretty consistent 
+40,2204,blue,[13|13|7|12|12|12|12|13|13|13],['l'|'l'|'m'|'l'|'m'|'l'|'l'|'m'|'m'|'m'],0,true,0,false,0,0,0,Elena,design makes upper hub shots difficult only lower hub shots low accuracy 
+40,8048,red,[18|8|8|12|12|7|9|12],['u'|'l'|'l'|'l'|'l'|'l'|'l'|'l'],1,true,1,false,0,0,0,Sathvik,
+40,5700,blue,[8|8|8|8|8|8|8|8|8|8],['l'|'l'|'l'|'l'|'u'|'u'|'m'|'u'|'l'|'l'],2,true,0,false,13,0,0,Brendon Hayes,Lower hub shots consistent  upper hub ok  drivers pretty good  climb pretty slow but still ok 
+40,8091,blue,[7],['m'],0,true,0,false,20,0,80,aimee,literally just drove around and did nothing the entire match  tried to climb on low and didn’t work 
+40,3189,red,[7|7|2|2|2],['m'|'u'|'m'|'m'|'m'],2,true,1,false,20,0,0,Shahzeb Lakhani,Sudsy Baka. This bot was super slow at cycling and missed most shots. Intake was small so they wasted a ton of time trying to intake one ball and then went to climb early. 
+40,3189,red,[13|8|13|8],['m'|'u'|'m'|'m'],2,false,1,false,12,0,0,laurie jin,mehhhhh. ok like their auton was ok (1 ball) and then their shooting is rly bad like 0 aim. defense was alr. can only climb mid. i would give them a hug 
+40,2367,N/A,[17|7|7|12|12|18|17],['m'|'m'|'u'|'u'|'u'|'u'|'u'],0,true,1,false,0,29,0,Saanvi,2367 got stuck in teleop on low rung for ~23 seconds and 8048 got 2367 unstuck  2367 also rammed into blue alliance once or twice 
+40,2367,red,[13|7|7|7|7|12],['u'|'u'|'m'|'u'|'u'|'m'],0,true,1,false,8,0,8,Michael Tran,really slow cycles and bad intaking despite lots of roaming. got stuck on the low bar w their climbing hooks for like 20 sec in the middle and had to get pushed down. shooter seems p ok tho. not great 
+41,701,N/A,[7|12|18|18|12|12|17|17|17|17|17|17|17],['u'|'u'|'m'|'m'|'m'|'u'|'m'|'u'|'m'|'m'|'u'|'u'|'u'],2,true,1,false,6,10,0,Saanvi,Cargo kept hitting the upper rim and didn't make inside 
+41,6918,blue,[13|8|8|8|8|8],['u'|'m'|'u'|'m'|'m'|'u'],2,true,1,false,9,0,0,aimee,would only shoot while directly under  balls would go up almost vertically so they missed a lot  
+41,5419,red,[12|12|2|2|7],['u'|'u'|'u'|'u'|'u'],3,true,5,false,0,0,0,Sathvik,
+41,299,blue,[8|13|13|13|13],['m'|'u'|'u'|'m'|'m'],0,true,0,false,0,8,0,Elena,slow driving and cycles needed to be up against the hubs when shooting lead to most balls bouncing out bricked 
+41,8404,red,[7|3|3|7|||7|7|4|4|9|9|14],['u'|'u'|'u'|'u'|'l'|'u'|'u'|'u'|'u'|'m'|'m'|'m'|'m'],0,true,1,false,0,0,5,Shahzeb Lakhani,Absolute stunner. Slow to shoot but pretty accurate. Shoved a few balls legally into an opponent  forcing out a foul. No climb. 
+41,5419,red,[13|12|12|9|9|14|9|7|7|9|9],['u'|'m'|'u'|'u'|'u'|'u'|'u'|'m'|'u'|'u'|'u'],3,true,11,false,27,0,0,laurie jin,uhhh i put teleop stuff in autonnnnn oops sowwy. they scored 1 or 2 in auton i forgor. anyway their climb is p good. seems reliable  but overall p average not bad not amazin 
+41,6918,blue,[13|8|8|8|8|8],['u'|'l'|'u'|'m'|'m'|'u'],2,true,1,false,3,0,0,Michael Tran,really slow cycles and shooter and intake aren’t great. always shoots right against hub and puts a ton of backspin so prone to bouncing out let alone not super accurate at times. consistent mid climb 
+41,1662,blue,[7|7|7|7],['u'|'u'|'u'|'u'],3,true,0,false,42,0,0,Brendon hayes,Intake has to be preside  drivers kinda slow  climb slow but still works  use like a minute to climb 
+42,3669,blue,[],[],3,true,0,false,58,0,13,Elena,played defense didn't attempt any shots bricked while climbing 
+42,687,red,[7],['l'],0,false,1,false,0,0,140,Sathvik,
+42,3598,N/A,[8|7|18|17|12],['l'|'l'|'m'|'u'|'u'],0,true,5,false,0,90,0,Saanvi,it fell over :(  
+42,687,red,[],[],1,true,0,false,5,0,1,laurie jin,DEFENSE DEFENSE they have good driver defense. climb is a wooden floppy thing 
+42,4643,blue,[2|8],['u'|'u'],0,true,0,false,0,0,0,aimee,tried to shoot bjt mostly just drove around doing nothing  didn’t do defense and got pushed around really easily too  
+42,6981,red,[],[],0,false,0,false,0,0,131,Shahzeb Lakhani,Objectively bad defense. Did not interfere with any offensive robots. This could  however  be a result of the many bots already playing defense.  
+42,2035,blue,[18],['l'],2,true,1,false,7,0,0,Brendon hayes,Objectively bad defense. Did some but most of the time it just drives around doing nothing 
+42,6981,red,[],[],0,false,0,false,0,0,75,Michael Tran,wood bot with literally nothing but defense don’t think they have a shooter or intake. also aren’t great at defense lol. did a few donuts in endgame which was cool. dnp 
+43,5458,red,[9|9|9],['m'|'m'|'m'],0,true,0,false,4,2,0,Kabir,Trouble with intake  bad aim  tried climbing with 7 seconds left and didn’t finish 
+43,5458,red,[4|4],['m'|'m'],0,true,0,false,4,0,0,aimee,literally did nothing something may have been wrong with their shooter but instead of playing defense they just drove around in circles  
+43,1160,red,[17|12|9|18|18],['u'|'u'|'m'|'m'|'u'],0,false,1,false,0,2,5,Charlie,did a lot of defense but still got some shots in as well 
+43,1072,blue,[18|13|7|7|12|12|7|8|8|7|7|14|14|14|14|7|7|7],['m'|'u'|'u'|'m'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'m'],4,true,2,false,17,0,0,Elena,
+43,1072,blue,[18|18|12|12|12|7|7|7|3|3|7|7|14|14|14|14|7|7],['m'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'],4,true,3,false,15,0,0,Michael Tran,great driving and tuning was on point. plus traversal climb was the cherry on top. dunno what happened for first ball of auto but that was one of the most complete performances so far by us. 
+43,1072,blue,[17|17|7|7|7|7|7|7|7|7|7|7|14|14|14|14|4|4|4|4],['u'|'m'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'],4,true,7,false,15,0,0,Akul,We too goaded. Period. Period. Period. 
+43,8020,blue,[8|7|7|7|2|12|4],['u'|'u'|'u'|'u'|'m'|'u'|'u'],2,true,2,false,32,0,0,Adheet,somewhat slow but not bad driving 44 254 blue [18|18|12|12|3|21|21|3|3|3|3|7|7|18|18|19|19|17|18|3|3|18|18|12|12|4|2|12|12] ['u'|'u'|'u'|'m'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'m'|'u'|'u'] 4 true 4 false 6 0 0 Shahzeb Lakhani It’s 254… I think we should definitely pick then given the opportunity. 
+44,3257,red,[8|8|8|8|2],['u'|'m'|'u'|'m'|'m'],2,true,0,false,13,0,0,aimee,missed a lot of shots  could only hold one ball at a time and it would go vertical so it would often not make it in  
+44,4904,red,[12],['m'],0,false,1,false,0,0,0,Charlie,lost a part on the field halfway through and couldn’t do anything after that 
+44,5728,red,[7|7|7],['u'|'u'|'m'],2,true,0,false,25,0,0,Kabir,Lots of dead time and climb was really slow (arm extended super slowly) 
+44,5274,blue,[12|18|12],['u'|'u'|'m'],1,true,1,false,7,0,0,Adheet,driver not very good  also i think theyre using mecanum 
+44,7539,blue,[7|7],['u'|'u'],3,false,1,false,120,0,0,Akul,One ball auton  went straight to climb. Can climb traversal  but climb is very very very slow and hooks don't align well  making them unstable and risky. 
+44,254,blue,[18|18|12|12|3|3|3|3|3|3|7|7|18|18|19|19|17|18|3|3|18|18|12|12|4|19|2|12|12],['u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'m'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'],4,true,4,false,0,0,0,Michael Tran,it’s 254. enough said. also sorry messed up all the shots mighta put them all in auton. to clarify it was a 4 ball auton and rest was teleop instead. also gave them 2 extra upper shots on the far side 
+45,766,red,[],[],0,false,0,false,0,125,0,aimee,did not move the entire match  
+45,766,red,[],[],0,false,0,false,0,127,0,Charlie,bricked for the entire time  
+45,7419,blue,[7|7|7|7|12|12],['u'|'m'|'u'|'m'|'u'|'u'],3,true,1,false,39,0,0,Adheet,slow intake  slow driving and not very precise 
+45,7137,blue,[12|3|4|9],['m'|'u'|'m'|'u'],0,true,1,false,20,0,0,Shahzeb Lakhani,Disappointing performance. Usually  they perform pretty well. This time  it seemed like their intake was broken or smth as they were not able to “suck in these balls” 
+45,8033,red,[18|18|12|12|12|12|12|12|12|12|12|18|18|14|14|17|17|15|15|12|12|12|3|3],['u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'m'|'u'|'u'|'u'|'m'|'u'|'u'|'u'|'u'|'u'],0,true,2,false,0,0,0,Michael Tran,p good showing. not bad overall and showed normal consistency and accuracy for their performance so far. 
+45,8033,red,[18|12|12|7|12|12|14|14|17|17|15|7|12|3|3],['u'|'u'|'u'|'u'|'u'|'u'|'u'|'m'|'u'|'u'|'u'|'u'|'u'|'u'|'u'],0,true,1,false,0,0,0,Kabir,Really great offense  almost all balls scored and from varying distances  speedy yet controlled driving.  
+45,7157,blue,[12|12|12|17|12|12|12|14|14|14|14|14|14|9|9|9|9|9|14|14|12|12|12|12|12|12],['u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'m'|'m'|'m'|'u'|'u'|'u'|'u'|'u'|'u'],0,true,7,false,0,0,0,Akul,Very consistent shooting. No climb abilities. Only a couple misses. Good intake. 
+46,299,blue,[7|7|9|9|3|4|4|9],['m'|'m'|'m'|'m'|'m'|'m'|'m'|'u'],0,true,0,false,0,0,4,Shahzeb Lakhani,Pretty slow cycles. Most of the balls that missed though were because of weird spin that caused them to go in and bounce out. 
+46,8048,blue,[13|13|7|7|13|12|8|8|3|3|8],['l'|'l'|'l'|'l'|'l'|'l'|'l'|'m'|'l'|'l'|'l'],2,true,2,false,0,0,0,aimee,pretty consistent but could only do lower and had to get really close to drop the balls in  which slowed them down 
+46,973,red,[18|18|17|17|18|18|12|7|7|7|7|14|14|18|18|12|7|7|3|9|9|14|14|17|17|12|12|17|7|7|4|4],['u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'m'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'],3,true,4,false,5,0,0,Michael Tran,on fire. rly good accuracy. good showing from 973. also scary how they were able to get like 1.5 cycles in endgame before zooming over and still getting their high bar climb 
+46,8048,blue,[13|13|8|8|13|13|8|8|13|13|8|8|8],['l'|'l'|'l'|'l'|'l'|'l'|'l'|'m'|'l'|'l'|'l'|'l'|'l'],2,true,2,false,7,0,0,Adheet,drivers were actually pretty good 
+46,6918,red,[13],['u'],0,false,0,false,0,1,0,Charlie,had trouble getting balls because of the defense from the blue team.  
+46,8091,blue,[7],['m'],0,true,0,false,0,0,67,Akul,Have one hook in back center to climb  didn't use it. Potential for mid climb. Played defense entire match. Bad defense. Did basically nothing the entire time. 
+46,973,red,[18|18|12|12|19|19|7|7|2|2|7|14|14|18|18|12|7|7|9|9|19|19|17|17|7|7|4|4],['u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'m'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'],3,true,4,false,5,0,0,Kabir,Really good offense  sorry if data is slightly inaccurate since it was difficult to keep track of all the shots they were making because of how fast they moved. 
+47,1836,blue,[7|7],['m'|'m'],4,true,0,false,20,0,0,Shahzeb Lakhani,Really fast climb. Couldn’t shoot at all this match as the intake had erectile dysfunction and couldn’t actually “suck in these balls.” went to climb really early. 
+47,687,blue,[],[],0,true,0,false,0,0,127,ethan,
+47,3189,red,[13|13],['m'|'u'],0,true,0,false,0,0,51,aimee,didn’t shoot very well but defense was ok  didn’t let themselves get pushed around  
+47,2204,red,[8|13|12],['l'|'l'|'l'],0,false,0,false,0,0,0,Charlie,had really good defense done on it by blue  but still managed to make some shots 
+47,687,blue,[],[],0,true,0,false,0,0,126,Adheet,good defense  pretty aggressive 
+47,6619,blue,[],[],1,true,0,false,3,0,117,Akul,Insane defense. Pinned 3598 against the wall for a while  knocked them over for a bit  1v3ed red for more than a minute  messed up a lot of shots for other bots. No intake  only have ability to do low 
+47,687,blue,[],[],0,true,0,false,0,0,132,Michael Tran,goat defense. not as good as previous matches cuz they got a couple penalties i think. still some of the best most physical defense i’ve seen 
+47,3189,red,[13],['m'],0,true,0,false,0,0,0,Kabir,Bad aim  couldn’t intake except for first shot  potentially nocked over teammate  mid match chilled at climb station for 15 secs before leaving climb station.  

@@ -3,6 +3,10 @@ import cv2
 import os
 
 
+# TODO:
+# - fix bug where scanner fails upon seeing a new QR code while there is an unfinished QR code being scanned 
+#   that has not already been completely scanned
+
 cap = cv2.VideoCapture(0)
 # initialize the cv2 QRCode detector
 detector = cv2.QRCodeDetector()
@@ -10,8 +14,6 @@ detector = cv2.QRCodeDetector()
 curQR = []
 prevQR = []
 QRidx = 0
-
-
 
 
 # if the file with the name qr.csv doesn't exist, create an empty file

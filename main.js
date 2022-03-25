@@ -1,9 +1,12 @@
 // use raw javacsript without jquery, babel, or any other library
 
 // TODOs:
+// show team numbers as options pulled from TBA instead of user-entered text
+// delete any commas and new-lines from commemnts
+
 // add reset button to climb time
 // auto-start climb timer when page is opened
-// show team numbers as options pulled from TBA instead of user-entered text
+
 
 // EVENT_CODE = "2022cada";
 EVENT_CODE = "2022cada";

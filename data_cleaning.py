@@ -52,4 +52,16 @@ df = pd.read_csv(csv_cleaned, sep=",")
 # remove the last column
 df = df.drop(df.columns[-1], axis=1)
 
-# print(df)
+# iterate over the rows.
+# for each row:
+#   get match #
+#   get red alliance and blue alliance teams from match #
+#   if either alliance contains the specified team #, then do the following:
+#       if it scouted team color is N/A, then do the following:
+#           if the team color is blue, the flip all of the location scouting data and set team color to blue
+#           else, if the team color is red, don't flip and set team color to red
+#       else, if the scouted team color is blue/red:
+            # if scouted team color matches actual team color, then do nothing
+            # else, print "scouted team color not matching actual team color for some reason...."
+#   else, print "team not found in match #"
+
