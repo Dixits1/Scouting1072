@@ -1,8 +1,9 @@
 import csv
 import pandas as pd
+from io import StringIO
 
 # read in qr_backup.csv as txt file
-f = open('qr_backup.csv', 'r')
+f = open('qr.csv', 'r')
 
 # split file into lines
 lines = f.readlines()
@@ -38,10 +39,9 @@ for line in lines:
 # compile new_lines into a string seperated by new lines
 new_lines_str = '\n'.join(new_lines)
 
-print(new_lines_str)
+csv_cleaned = StringIO(new_lines_str)
 
-# read in qr.csv
-df = pd.read_csv('qr.csv')
+df = pd.read_csv(csv_cleaned, sep=",")
 
 # remove the last column
 df = df.drop(df.columns[-1], axis=1)
