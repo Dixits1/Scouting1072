@@ -46,8 +46,9 @@ while True:
 
             qr = "".join(curQR)
 
-            print(qr)
-            # print(curQR)
+            name = qr.split(',')[12]
+
+            print(name)
 
             if qr[-1] != ',':
                 qr += ','
@@ -57,8 +58,7 @@ while True:
                 # split file into lines by \n
                 lines = csvfile.readlines()
                 for i in range(len(lines)):
-                    if lines[i].endswith('\n'):
-                        lines[i] = lines[i][:-1]
+                    lines[i] = lines[i].replace('\n', '')
 
                 # check if the qr code is already in the file
                 if qr not in lines:

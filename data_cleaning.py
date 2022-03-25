@@ -24,12 +24,14 @@ for line in lines:
 
     # in the last_elem string, iterate over each character. if character is not a letter from A-Z (either uppercase or lowercase) and is not a number, then replace it with a space
     for i in range(len(last_elem)):
-        if not (last_elem[i].isalpha() or last_elem[i].isdigit() or last_elem[i] == '(' or last_elem == ')'):
-            last_elem = last_elem[:i] + ' ' + last_elem[i+1:]
+        if last_elem[i] == ',':
+            last_elem = last_elem[:i] + last_elem[i+1:]
 
 
     # combine all elements in pieces after the 13th element into 1 string
     new_pieces.append(last_elem)
+    
+    print(last_elem)
 
     pieces_merged = ','.join(new_pieces)
 
@@ -37,7 +39,11 @@ for line in lines:
     new_lines.append(pieces_merged)
 
 # compile new_lines into a string seperated by new lines
-new_lines_str = '\n'.join(new_lines)
+new_lines_str = ''.join(new_lines)
+
+# save new_lines_str to a new file called qr_cleaned.py
+with open('qr_cleaned.csv', 'w') as f:
+    f.write(new_lines_str)
 
 csv_cleaned = StringIO(new_lines_str)
 
@@ -46,4 +52,4 @@ df = pd.read_csv(csv_cleaned, sep=",")
 # remove the last column
 df = df.drop(df.columns[-1], axis=1)
 
-print(df)
+# print(df)
