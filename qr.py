@@ -22,6 +22,9 @@ if not os.path.isfile('qr.csv'):
 while True:
     _, img = cap.read()
 
+    # display webcam image to user
+    cv2.imshow('Webcam', img)
+
     # detect and decode
     data, bbox, _ = detector.detectAndDecode(img)
 
@@ -44,7 +47,7 @@ while True:
             qr = "".join(curQR)
 
             print(qr)
-            print(curQR)
+            # print(curQR)
 
             if qr[-1] != ',':
                 qr += ','
