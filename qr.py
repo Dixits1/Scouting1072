@@ -8,51 +8,46 @@ cap = cv2.VideoCapture(0)
 detector = cv2.QRCodeDetector()
 
 curQR = []
-nQRs = 1
+prevQR = []
 QRidx = 0
 
 
 
+
+# if the file with the name qr.csv doesn't exist, create an empty file
+if not os.path.isfile('qr.csv'):
+    with open('qr.csv', 'w') as f:
+        f.write('')
 
 while True:
     _, img = cap.read()
 
     # detect and decode
     data, bbox, _ = detector.detectAndDecode(img)
-    # check if there is a QRCode in the image
+
     if data != "":
-        if len(curQR) == 0:
-            cPieces = data.split("C", 1)
-            QRidx = int(cPieces[0])
-            dataL = cPieces[1]
-            lPieces = dataL.split("L", 1)
-            nQRs = int(lPieces[0])
-            curQR = [None] * int(nQRs)
+        cPieces = data.split("C", 1)
+        lPieces = cPieces[1].split("L", 1)
+        QRidx = int(cPieces[0])
+        QRcnt = int(lPieces[0])
+        dataStr = lPieces[1]
 
-            curQR[QRidx] = lPieces[1]
+        if QRcnt != len(prevQR) or (QRcnt == len(prevQR) and prevQR[QRidx] != dataStr):
+            if len(curQR) == 0:
+                curQR = [None] * QRcnt
+            
+            curQR[QRidx] = dataStr
 
-        else:
-            cPieces = data.split("C", 1)
-            QRidx = int(cPieces[0])
-            dataL = cPieces[1]
-            lPieces = dataL.split("L", 1)
-            nQRsCur = int(lPieces[0])
+        if all(curQR) and len(curQR) > 0:
+            prevQR = curQR
 
-            curQR[QRidx] = lPieces[1]
-
-        # print(curQR)
-        # print(data)
-
-        if all(curQR):
             qr = "".join(curQR)
+
+            print(qr)
+            print(curQR)
 
             if qr[-1] != ',':
                 qr += ','
-
-            # if the file with the name qr.csv doesn't exist, create an empty file
-            if not os.path.isfile('qr.csv'):
-                with open('qr.csv', 'w') as f:
-                    f.write('')
 
             # open file for writing and reading
             with open('qr.csv', 'r+') as csvfile:
@@ -66,7 +61,7 @@ while True:
                 if qr not in lines:
                     # write the qr code to the file
                     csvfile.write(qr + '\n')
-                    print("QR code added to file")
+                    print(">>>>> QR code added to file <<<<<")
 
             curQR = []
 
