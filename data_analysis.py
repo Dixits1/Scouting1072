@@ -5,7 +5,7 @@ import numpy as np
 
 EVENT_CODE = "2022cada"
 API_KEY = "oa9Mt34ilcOT2f6R5hlRSxKlkLWknCzXhyQOxHkn8gmtHtR69BNtCL1TSz7iQIUA"
-matchNum = 64
+matchNum = 74
 showPlots = False
 
 
@@ -82,29 +82,29 @@ def shotAttemptsAnalysis(teamData):
         plt.title(str(team) + " Shot Count Frequencies")
         plt.show()
 
-def shootingPctAnalysis(teamData):
-    matches = teamData["outcomes"].to_numpy()
-    matchNums = teamData["matchNum"].to_numpy()
-    lens = []
-    matchDict = {}
+# def shootingPctAnalysis(teamData):
+#     matches = teamData["outcomes"].to_numpy()
+#     matchNums = teamData["matchNum"].to_numpy()
+#     lens = []
+#     matchDict = {}
 
-    for m in range(len(matches)):
-        outsStr = matches[m][1:-1]
-        outs = [outs[1: -1] for outs in outsStr.split("|")]
-        matchNum = matchNums[m]
+#     for m in range(len(matches)):
+#         outsStr = matches[m][1:-1]
+#         outs = [outs[1: -1] for outs in outsStr.split("|")]
+#         matchNum = matchNums[m]
 
-        # check if the dictionary contains a key of matchNum
-        #   if it does, append the length of locs to the list
+#         # check if the dictionary contains a key of matchNum
+#         #   if it does, append the length of locs to the list
         
-        if matchNum in matchDict:
-            matchDict[matchNum].append(len(locs))
-        else:
-            matchDict[matchNum] = [len(locs)]
+#         if matchNum in matchDict:
+#             matchDict[matchNum].append(1.0 - (outs.count('m') * 1.0)/len(outs))
+#         else:
+#             matchDict[matchNum] = [len(1.0 - (outs.count('m') * 1.0)/len(outs))]
 
-    for key in matchDict:
-        lens.append(int(np.mean(matchDict[key])))
+#     for key in matchDict:
+#         lens.append(int(np.mean(matchDict[key])))
 
-    print("Mean Shots Taken: " + str(round(np.mean(lens), 2)) + " Std Dev.: " + str(round(np.std(lens), 2)))
+#     print("Mean Shots Taken: " + str(round(np.mean(lens), 2)) + " Std Dev.: " + str(round(np.std(lens), 2)))
 
 
 alliances = getAlliances(matchNum)
@@ -126,4 +126,4 @@ for teams in alliances:
 
         # commentsAnalysis(teamData)
         # climbFreqAnalysis(teamData)
-        scoringAnalysis(teamData)
+        shotAttemptsAnalysis(teamData)

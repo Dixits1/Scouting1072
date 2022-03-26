@@ -56,7 +56,6 @@ matchNum,teamNum,teamColor,locations,outcomes,climbLevel,initLinePassed,autonCou
 11,2288,blue,[17|17|12|12|8|7|7],['u'|'u'|'l'|'l'|'l'|'l'|'l'],2,True,2,True,6,0,0,Akul,Intake takes a while  doesn’t work very well  barely hangs off the ground with mid bar  shot mostly lows  didn’t do much in auton 
 11,1160,blue,[3|4|4|18|18|19|19],['u'|'u'|'u'|'u'|'m'|'u'|'u'],2,True,0,False,8,0,0,sania gupta,started climb from mid rung. accurate shooting into upper hub 
 11,766,red,[],[],0,True,0,False,7,0,0,Kabir,Bot had intake and carried 2 balls throughout entire match yet did not score or do any defense. It just ran around the field a ton (so it’s probably not an FMS or comms issue). Did not finish climb.  
-11,254,red,[18|12|12|12|19|19|19|12|12|18|18|18|17|7|7|17|13|13|19|19|17|17|12|12],['u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'],4,True,5,False,3,0,0,Sophia Z,254 missed one shot in teleop  but I forgot to put it in. Either way  they’re cracked. 
 11,1678,red,[2|4|4|2|3|7|3|3|7|7|9],['u'|'m'|'m'|'u'|'u'|'u'|'u'|'m'|'u'|'u'|'u'],4,True,0,False,12,0,0,Deeya,climb time is actually around 6 secs  very fast  pretty accurate  efficient 
 12,4643,blue,[18|13|13|18|18|13],['m'|'m'|'m'|'m'|'m'|'l'],0,True,0,False,0,0,0,sania gupta,very inconsistent shooting. missed most shots 
 12,7539,red,[8|7],['u'|'m'],0,True,1,False,0,0,0,Kabir,Team had tons of trouble with intake  also tried climbing at 45 seconds but didn’t end up completing the climb.  
@@ -64,7 +63,6 @@ matchNum,teamNum,teamColor,locations,outcomes,climbLevel,initLinePassed,autonCou
 12,8020,blue,[8|7|7|2|7|17],['u'|'u'|'u'|'u'|'u'|'m'],4,True,2,False,42,0,0,ethan,single shot shooter  consistent and accurate shooting  climbing swings a lot but is very stable 
 12,4643,blue,[16|16|11|11|11|11|11],['m'|'m'|'m'|'m'|'m'|'m'|'m'],0,False,0,False,0,15,0,Akul,Very slow  didn’t move during auton or shoot  missed every ball  has double intake from front and back but balls got jammed in shooter 
 12,8020,blue,[17|12|14|14],['m'|'m'|'l'|'l'],4,True,4,False,0,0,0,Sathvik Chundru,
-12,7157,red,[18|18|18|7|18|18|14|14|18|18|19|19|12|12|18|18|12],['m'|'u'|'u'|'u'|'l'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'m'|'u'|'u'|'m'|'u'|'u'|'u'],0,True,1,False,0,0,0,Sophia Z,Robot’s shooting was pretty accurate  but because the robot is quite tall  it sometimes wobbled whilst moving around. 
 12,8091,red,[],[],0,True,0,False,17,0,0,Deeya,scoreboard wasnt up so i did the wrong robot at first  tried to climb but hooks failed  i put no climb but it might have been very close to low climb (unsure) 
 13,3669,blue,[],[],0,True,0,False,0,77,3,ethan,bricked and didnt do anything most of the time 
 13,3669,blue,[],[],0,True,0,False,0,26,0,Ada,Got stuck on something 
@@ -130,7 +128,6 @@ matchNum,teamNum,teamColor,locations,outcomes,climbLevel,initLinePassed,autonCou
 20,5458,blue,[8|8|8|8|8|8|8],['l'|'l'|'m'|'m'|'l'|'m'|'l'],2,True,1,False,10,0,0,Michael Tran,rly rly slow cycles  always goes right up to hub for lower and somehow missed a few shots still  missed intake on supposed 2 ball auton 
 20,3257,red,[17|17|17|17|13|17|17|18|18],['u'|'u'|'u'|'u'|'m'|'u'|'m'|'m'|'u'],1,True,1,True,4,4,0,Sophia Z,Robot takes quite a bit of time setting up to shoot. 
 20,2204,blue,[],[],0,True,0,False,0,0,0,Elena,Bot picked up other team's ball and couldn't eject - didn't attempt any shots - didn't attempt climb either 
-23,1678,red,[12|12|17|17|18|17|17|18|18|17|17|18|18|17|17|17|17|17|18|18|19|17|12|7|7|7|7|7|7|7|7|7|7|7|7],['u'|'m'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'m'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'],4,True,4,False,16,0,0,ethan,very fast cycle  sometimes woulf pick up 3 balls  skip high beam 
 23,2288,blue,[13|12|7|7|7|7|12|12],['m'|'l'|'l'|'l'|'m'|'l'|'l'|'l'],2,True,8,False,2,0,0,Sophia,Intake is small  failed to intake a lot of cargo. Only went for lower hub. 
 22,7539,red,[],[],4,True,0,False,75,14,0,Sophia Z,Robot’s shooting skills are unknown because all of teleop was spent on the climb. 
 23,751,blue,[12|12|7|7|12],['m'|'u'|'u'|'u'|'m'],0,False,0,False,0,0,0,Elena,very slow and wobbly - few shots 
@@ -172,7 +169,6 @@ matchNum,teamNum,teamColor,locations,outcomes,climbLevel,initLinePassed,autonCou
 28,5700,red,[8|7|7|7|7|7|13|13|8],['m'|'l'|'l'|'m'|'m'|'m'|'l'|'l'|'l'],2,True,1,False,13,0,0,Sophia Z,Robot only shot balls into the lower hub  so it’s ability to shoot into the top hub is unknown.  
 28,5419,blue,[12|7|7|7|7|7|7|7|9],['u'|'u'|'u'|'u'|'u'|'m'|'u'|'u'|'u'],3,True,2,True,31,0,4,laurie jin,driving like alr once they had 3 balls in their bot chunky weird climb that was having trouble working shooting/getting balls p avg or smtg nothing amazballs 
 28,5419,blue,[12|12|12|12|7|7|7|7|7|7|7|7|9|9],['u'|'u'|'u'|'m'|'m'|'u'|'u'|'u'|'u'|'m'|'u'|'m'|'u'|'u'],3,True,2,False,17,0,0,Brendon Hayes,
-29,973,red,[18|17|17|17|18|19|9|9|9|14|14|12|9|9|3|3|3|3|19|19|17|17],['u'|'u'|'u'|'u'|'u'|'m'|'u'|'u'|'m'|'u'|'u'|'u'|'u'|'u'|'u'|'m'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'],3,True,6,False,24,0,0,ethan,
 29,6918,blue,[17|17|9|8|7],['m'|'u'|'u'|'u'|'m'],0,True,5,False,0,0,0,Sathvik Chundru,
 29,1072,red,[7|7|7|7|7|3|7|7|12|12|7|7|7|7|7|7],['u'|'u'|'u'|'m'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'m'],3,False,2,False,11,0,0,Charlie,we slayed so hard. shoutout to us. the shots were clean  the climbing was good  but it got stuck on something once so 
 29,2204,blue,[8|8|8|8|8|7|3],['l'|'m'|'m'|'m'|'m'|'m'|'u'],0,True,1,False,0,13,0,sania gupta,struggled to detach climber hooks from rungs when intaking balls 
@@ -189,7 +185,6 @@ matchNum,teamNum,teamColor,locations,outcomes,climbLevel,initLinePassed,autonCou
 31,1836,red,[8],['l'],4,False,1,False,18,0,0,Charlie,had trouble picking up balls  but did well on the climb 
 31,2288,blue,[13|13|13|13|13],['m'|'m'|'m'|'m'|'m'],2,True,1,False,10,0,0,sania gupta,inconsistent shooting. only shoots into lower hub 
 31,7157,red,[12|12|17|17|7|7|7|7|9|9],['u'|'u'|'m'|'m'|'u'|'u'|'u'|'u'|'u'|'m'],3,True,2,False,23,0,46,Adheet,swerve drive  fast bot with a good driver  can also score  played good defense 
-31,5274,red,[7|7|7|7|8],['u'|'u'|'u'|'l'|'u'|'u'|'l'|'u'|'m'],2,True,1,True,10,0,0,Sophia Z,Driver spent a lot of time wandering around on the field. Shooting was pretty consistent though  and none of the balls that went into the hub bounced out. 
 31,7667,blue,[7|7],['u'|'u'],0,True,0,False,0,0,0,Deeya,The bot had good aim however the bot could not pick up cargo unless the cargo was in between a wall and the bot. Did not attempt climb  decent speed 
 32,7539,red,[7],['m'],3,False,0,False,57,0,0,Ada,I missed auton T-T. Climb was really janky and unstable 
 32,7539,red,[7|7|7],['u'|'m'|'m'],3,True,2,False,62,13,0,ethan,arm climbing seemed a bit desynchronized 
@@ -265,7 +260,6 @@ matchNum,teamNum,teamColor,locations,outcomes,climbLevel,initLinePassed,autonCou
 41,6918,blue,[13|8|8|8|8|8],['u'|'m'|'u'|'m'|'m'|'u'],2,True,1,False,9,0,0,aimee,would only shoot while directly under  balls would go up almost vertically so they missed a lot  
 41,5419,red,[12|12|2|2|7],['u'|'u'|'u'|'u'|'u'],3,True,5,False,0,0,0,Sathvik,
 41,299,blue,[8|13|13|13|13],['m'|'u'|'u'|'m'|'m'],0,True,0,False,0,8,0,Elena,slow driving and cycles needed to be up against the hubs when shooting lead to most balls bouncing out bricked 
-41,8404,red,[7|3|3|7|7|7|4|4|9|9|14],['u'|'u'|'u'|'u'|'l'|'u'|'u'|'u'|'u'|'m'|'m'|'m'|'m'],0,True,1,False,0,0,5,Shahzeb Lakhani,Absolute stunner. Slow to shoot but pretty accurate. Shoved a few balls legally into an opponent  forcing out a foul. No climb. 
 41,5419,red,[13|12|12|9|9|14|9|7|7|9|9],['u'|'m'|'u'|'u'|'u'|'u'|'u'|'m'|'u'|'u'|'u'],3,True,11,False,27,0,0,laurie jin,uhhh i put teleop stuff in autonnnnn oops sowwy. they scored 1 or 2 in auton i forgor. anyway their climb is p good. seems reliable  but overall p average not bad not amazin 
 41,6918,blue,[13|8|8|8|8|8],['u'|'l'|'u'|'m'|'m'|'u'],2,True,1,False,3,0,0,Michael Tran,really slow cycles and shooter and intake aren’t great. always shoots right against hub and puts a ton of backspin so prone to bouncing out let alone not super accurate at times. consistent mid climb 
 41,1662,blue,[7|7|7|7],['u'|'u'|'u'|'u'],3,True,0,False,42,0,0,Brendon hayes,Intake has to be preside  drivers kinda slow  climb slow but still works  use like a minute to climb 
@@ -376,3 +370,128 @@ matchNum,teamNum,teamColor,locations,outcomes,climbLevel,initLinePassed,autonCou
 55,687,blue,[11],['u'],0,True,1,False,0,78,45,Deeya,randomly stopped moving mid match. weak defense/offense 
 55,7667,red,[7|7|12|7],['u'|'u'|'u'|'u'],0,True,0,False,0,0,0,Kabir,Trouble with intake and drivers had difficulties with controlling robot but good aim 
 55,751,blue,[7|7|4|4|9|14|14|12|12],['m'|'m'|'u'|'u'|'m'|'u'|'m'|'m'|'m'],2,True,9,False,8,0,0,Brendon hayes,Slowwwwwww cycle. Drivers are ok. Fast mid rung climb. Kinda smells like a baka  
+56,2035,red,[12|12|7],['u'|'m'|'u'],0,True,1,False,19,0,57,Shahzeb Lakhani,Pretty trash defense. At one point they played defense against their own team. Only blocked a single shot from citrus. 
+56,2035,red,[17],['u'],0,True,1,False,15,2,36,ethan,was wobbling and running around  intake didnt seem to work or something 
+56,3669,blue,[12|12|17],['u'|'u'|'u'],4,True,2,False,45,0,0,Akul,Small intake  difficult for them to score balls  climber failed  hung from one arm off of traversal. Has ability to do a perfect traversal. 
+56,1836,blue,[],[],4,True,0,False,27,0,70,Elena,effective defense solid climb 
+56,8020,red,[7|7|7|7|7|7|7|7|7|7],['u'|'u'|'m'|'u'|'u'|'u'|'m'|'u'|'u'|'u'],4,True,6,False,50,0,13,Brendon Hayes,Cycles are a little slow  tends to want to go back to the same spot to shoot  slow climb but can get traversal and climb looked sturdy. Overall ok bot 
+57,6662,red,[17|13|13],['m'|'m'|'m'],0,True,1,False,0,0,64,Kunal,Tried a couple shots then just started doing defense  
+57,5458,red,[7|7|12|12|12|12|12|12|8|8|12|13|13|13|13],['l'|'l'|'l'|'l'|'l'|'l'|'l'|'l'|'l'|'l'|'l'|'l'|'l'|'m'|'l'],0,True,2,False,0,2,0,Tanay Sharma,Only lower hub shots  didn't climb 2 ball auto 
+57,7137,blue,[12|19|3],['m'|'m'|'m'],2,True,1,False,26,0,70,Akul,Played defense entire time pretty much. Slow climb. Climb almost failed. Ca traverse. 
+57,5458,red,[13|13|13|13|13|13|13|13|13|13|13|8|8],['l'|'l'|'l'|'l'|'l'|'l'|'l'|'l'|'l'|'l'|'l'|'l'|'l'],0,False,1,False,0,0,0,Brendon Hayes,slow cycles and only shoots one pointers  almost no auton  didn't climb  overall pretty ass 
+57,1160,blue,[18|18|7|7|2|2|7|7|7|7|17|17|7],['u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'],0,True,2,False,7,0,0,Adheet,robot is slow to move  intake  align but drivers are precise enough to make it work  consistent shooter too 
+57,1160,blue,[18|18|12|12|7|7|7|7|7|7|7|18|18|7],['u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'],0,True,2,False,0,0,0,Elena,good accuracy but cycles are a bit slow not many balls shot and missed climb 
+57,8404,red,[13|13|13|13|13|13|13],['u'|'m'|'m'|'m'|'m'|'m'|'u'],0,True,1,False,0,0,5,ethan,went for close up shots next to goal into upper. hook too high to go under climber so couldnt retrive balls. heavily defended by 7137 
+57,2367,blue,[18|12|12|7],['u'|'u'|'u'|'m'],0,True,0,False,0,6,7,sania gupta,slow driving. hit alliance partner’s bot on climb 
+58,2288,red,[8|7|12|9],['l'|'l'|'l'|'l'],0,False,1,False,0,0,0,Sathvik Chundru,
+58,3189,blue,[12|8],['u'|'u'],1,True,1,False,10,0,65,ethan,intake didnt seem to work that well. defended 1072 
+58,2204,red,[8|17],['m'|'m'],0,False,1,False,0,6,57,Tanay Sharma,Auto was completely useless  blocked another team as well. Defense barely even worked 
+58,1072,red,[18|18|17|7|7|3|3|7|8|8|8|8|7|7|7],['m'|'m'|'m'|'m'|'u'|'m'|'m'|'m'|'m'|'u'|'m'|'u'|'u'|'m'|'m'],3,True,3,False,18,0,0,Kunal,Kinda threw ngl  
+58,7539,blue,[13|13],['u'|'u'],3,True,2,False,90,0,0,Deeya,made 2 shots and then went straight for climb 1st climb was a fail so they reattempted  2nd climb was successful at high 
+58,5419,blue,[17|17|17|3|3|3|7|7|7|7],['u'|'u'|'u'|'u'|'m'|'u'|'u'|'m'|'u'|'m'],4,True,10,False,13,0,0,Sophia,Might’ve put some of the teleop data in auto. they had a three ball auto. scored a lot even while defended 
+58,3189,blue,[12],['u'],0,True,0,False,22,0,62,Adheet,played okay defense on us  got called for a foul though 
+58,7539,blue,[7|7],['u'|'u'],3,True,2,False,51,0,0,Akul,Fell while climbing. Barely participated in shooting. 
+59,6619,blue,[],[],0,True,0,False,0,0,29,Sophia,Defense bot.  
+59,4643,red,[7|7|7|7|7|7|7|7|7],['u'|'u'|'m'|'u'|'m'|'m'|'m'|'m'|'m'],0,True,0,False,0,0,0,Kunal,Almost all cargo got in hub  then bounced out 
+59,299,red,[13|13|13|13|13|18],['u'|'u'|'u'|'u'|'u'|'u'],0,True,6,False,0,17,0,Tanay Sharma,Low shoot frequency  bricked in auto  slow 
+59,4643,red,[7|7|7|7|7|7|7|7|7],['u'|'u'|'m'|'u'|'m'|'m'|'m'|'m'|'m'],0,True,0,False,0,0,0,ethan,shot from same spot one at a time. most of balls made it in the goal but popped out 
+59,766,blue,[7|7],['u'|'m'],4,True,1,False,34,0,1,Adheet,had technical issues with their intake and aligning for shots 
+59,3257,blue,[17|17|17|17|7|18|7|7],['u'|'u'|'l'|'u'|'m'|'u'|'u'|'u'],0,True,1,False,12,0,0,Akul,Has potential to climb. Didn't climb in 12 seconds.  
+59,3257,blue,[17|17|17|17|17|7|7],['m'|'m'|'u'|'u'|'u'|'m'|'u'],0,True,7,False,6,0,0,Deeya,was getting targeted by 1458 got a few balls in but it was hard cause of 1458 attempted climb in the last 10 secs but it was a fail 
+59,1458,red,[],[],0,True,0,False,0,0,41,Sathvik Chundru,
+60,687,red,[],[],0,True,0,False,0,0,136,Sathvik Chundru,
+60,7157,red,[17|17|17|7|7|18|18|3|3|8|8|7|7|7|7|7|7|18|18|8|8|7],['u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'m'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'m'],2,True,3,False,8,0,0,ethan,good mobility and consistent shooting 
+60,2551,red,[8|8|8|8|8|8|8|8|8|8|8|8|8],['u'|'u'|'l'|'u'|'u'|'m'|'u'|'u'|'u'|'m'|'u'|'u'|'u'],4,True,13,False,19,0,0,Kunal,Very consistent shooting from right against hub  
+60,701,blue,[7|12|7|12|12|18|18|12],['u'|'u'|'u'|'u'|'u'|'u'|'u'|'m'],0,True,1,False,0,0,0,Adheet,slow aligning  were not able to break past defense 
+60,8048,blue,[13|13|13|8|8|13|13|13|13|8|8|8|8],['l'|'l'|'l'|'l'|'l'|'l'|'l'|'l'|'l'|'l'|'l'|'l'|'l'],0,True,2,False,0,0,0,Deeya,only attempted lower fairly decent at getting cargo got a lot of balls into the lower hub did not attempt climber 
+60,7157,red,[13|13|7|7|8|8|8|8|7|7|13|13|13|13|13|13|8|8|13],['u'|'u'|'u'|'u'|'u'|'u'|'u'|'m'|'u'|'m'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'m'],2,True,19,False,10,0,0,Tanay Sharma,Intake seemed broken at end  climber looks weak  really high shot frequency 
+60,5728,blue,[7|17|17|12|12|14|14|14],['m'|'u'|'u'|'m'|'m'|'u'|'u'|'m'],0,True,8,False,0,0,0,Sophia,Oops data entered in auto again sorry. Scored one ball in auto. Performance was not grt 
+61,3669,blue,[],[],4,True,0,False,22,0,6,Sophia,Intook two red balls while being on blue alliance in order to keep them away from 254 
+61,8091,red,[12|14],['l'|'m'],2,True,0,False,0,0,0,Sathvik Chundru,
+61,751,blue,[],[],0,False,0,False,0,8,51,Kunal,Only defense  not bad for physical not  no autons 
+61,7419,blue,[7],['u'],3,True,1,False,29,0,20,Adheet,tried to play defense  very unstable robot  drivers did not have good control 
+61,751,blue,[],[],0,False,0,False,0,0,49,ethan,held opponents balls and defended. aggressive defense and some penalities 
+61,6918,red,[],[],2,True,0,False,40,0,0,Tanay Sharma,Didn't see auto bc clerical mistake  but no shots in teleop  climbed with 70 second left and only to mid 
+61,751,blue,[7],['m'],0,False,1,False,0,0,52,Deeya,picked up red balls to take red's balls off the field defense based did not attempt many shots 
+62,1836,red,[8|8|8|13|13],['l'|'l'|'l'|'l'|'l'],4,True,1,False,13,0,0,ethan,shot in lower by going next to goal. reliable climber 
+62,5458,blue,[7|7|7|13],['l'|'l'|'l'|'l'],2,True,1,False,10,7,0,Sophia,Easily defended 
+62,2367,blue,[18],['u'],0,True,0,False,0,22,48,Adheet,think their intake was broken  solid defense though 
+62,6662,red,[18|18],['m'|'m'],0,True,0,False,0,0,112,Kunal,Defense all the time not amazing tho pushed around one bot a good portion of the match 
+62,1836,red,[],[],1,False,0,False,17,9,4,Tanay Sharma,Wood bot  no auto  bad climb and teleop 
+62,4904,blue,[18|17],['m'|'m'],0,True,0,True,0,0,57,Deeya,their bot went under review attempted shooting but it didnt work out switched to defense did not attempt climber 
+63,2035,blue,[],[],2,True,0,False,3,0,86,Sophia,Decent defense 
+63,8033,red,[7|7|7|7|3|3|3|3|9|9|7|7|7|7|12|12|7|7|3|3|7|7|18|18],['u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'m'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'],0,True,2,False,0,0,0,Kunal,Yeah they're pretty good but no endgame 
+63,1160,red,[12|12|12|12|12|7|7|12|12|19|19|7|7|7],['u'|'u'|'m'|'u'|'u'|'u'|'m'|'u'|'m'|'u'|'u'|'u'|'m'|'m'],2,True,1,False,15,0,0,ethan,consistent shooting 
+63,1662,blue,[18|17|17|17|17|17|17|17|17|12|12],['m'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'],2,True,1,False,25,0,0,Deeya,they struggled a lot with climber (fell twice) did pretty good with shooting into the hub pretty much only shot from 2 spots 
+63,8404,blue,[8|7|7|7|13|13|7|7|13|13|8|8],['u'|'m'|'u'|'u'|'m'|'m'|'u'|'u'|'u'|'m'|'u'|'m'],0,True,1,False,0,0,0,Adheet,inconsistent shooting  can only score from next to the hub 
+64,1678,blue,[17|17|17|17|17|17|14|14|3|3|3|4|4|4|4|4|4|4|4|4|4|4|4|14|14|17|17],['u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'m'|'u'|'u'|'u'|'u'|'u'|'m'|'u'|'u'|'u'|'u'],4,True,4,False,10,0,0,Sophia,Well theyre citrus 
+64,7137,red,[12|12|12|12|12],['m'|'m'|'m'|'u'|'u'],0,True,1,False,0,79,0,ethan,pretty good shooting then bricked 
+64,3598,red,[8|8|12|2|3|4|7|12],['l'|'l'|'u'|'u'|'u'|'u'|'u'|'u'],3,True,8,False,42,0,0,Tanay Sharma,Really slow climb   
+64,1072,blue,[7|7|7|7|7|7|14|14|7|7|7|7|3|3|7|3|3|3|3],['u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'],0,True,2,False,0,2,0,Adheet,
+64,5274,blue,[],[],2,True,0,False,36,0,62,Deeya,went on defense. held 2 red balls. didnt do much other than that 
+65,6619,red,[],[],1,True,0,False,3,0,111,ethan,only drivetrain and defended almost tipped because too light 
+65,6619,red,[],[],1,True,0,False,3,0,0,lauriejin,like they can only climb and its not even amazing climb. anands team yum also poopy defense blegh 
+65,6619,red,[],[],0,True,0,False,0,9,100,Saanvi,6619 could only drive & defend because of the lack of intake/shooter 
+65,8048,blue,[13|13|8|13|8|8|8],['l'|'l'|'m'|'l'|'l'|'l'|'m'],0,True,2,False,0,0,0,Deeya,slow. only attempted lower hub. went into the climber zone in last 5 seconds. did not attempt climb 
+65,3189,red,[13],['m'],3,False,1,False,5,0,0,Charlie,attempted defense  but was really bad at it. didn’t make a single shot and instead wandered around in circles the whole time. climb was ok though 
+65,2551,blue,[8|8|8|8|8|8|8|8|8|13|13],['u'|'u'|'u'|'u'|'u'|'m'|'u'|'u'|'u'|'m'|'m'],4,True,2,False,15,0,0,Brendon Hayes,Consistent cycles  good high hub scoring. Drive team is competent. Only problem is that they had a dead spot where balls could have gotten stuck. Traversal climb fast but relays in momentum.  
+66,5419,blue,[12|12|7|7|2|2|7|7|18|18|12|17|17|12|2],['u'|'u'|'u'|'u'|'u'|'m'|'u'|'u'|'u'|'m'|'u'|'u'|'m'|'u'|'m'],3,True,0,False,34,0,0,ethan,good aiming went for traversal but hooks didnt latch 
+66,766,red,[],[],0,False,0,False,0,129,0,Charlie,bricked the entire time.  
+66,751,red,[12|12],['u'|'u'],0,True,0,False,0,63,0,Ada,Very slow  struggled to intake balls. Was defended at first  very susceptible. Then bricked for a long time 
+66,687,blue,[],[],1,True,0,False,1,0,0,lauriejin,they just did defense it was p good idk then all the red bots bricked and they looked so clueless cuz they couldnt defend lmfao poop 
+66,751,red,[12|12|12],['u'|'u'|'u'],0,True,1,False,0,77,0,Saanvi,687 was playing aggressive defense against 751. bricked after 687 rammed into it multiple times 
+66,687,blue,[],[],1,True,0,False,12,0,106,Deeya,defense bot. knocked out 751. attempted lower climb successfully. pretty good at its job overall 
+66,1458,blue,[],[],0,True,0,False,0,122,0,Brendon Hayes,Bricked for the entire match. Kinda doodoo at playing video games they can’t find the reset button.  
+66,5419,blue,[18|7|7|3|3|7|7|18|18|18|18],['m'|'u'|'u'|'u'|'u'|'u'|'u'|'m'|'u'|'u'|'u'],4,True,1,False,27,0,0,Elena,overall good accuracy. had a little trouble with climb but reached traversal 
+67,5458,red,[8|8],['l'|'l'],0,True,2,False,13,0,75,ethan,rammed into other bots moderate defense 
+67,5458,red,[8|8],['l'|'l'],0,True,2,False,17,2,101,Ada,Was trying to protect 254 from defense by 1836. Was decent at it - managed to pin 1836 against the wall for some time 
+67,3669,red,[12],['m'],4,True,1,False,35,0,0,Saanvi,Seemed to be having problems with shooter or intake - they did not attempt to shoot any cargo in the hub other than in auto 
+67,1836,blue,[],[],4,True,0,False,20,0,67,Elena,no difficulty with traversal solid. played good defense made 254 miss a few shots 
+67,1836,blue,[8],['l'],4,True,1,False,19,10,72,Brendon Hayes,Played defense against 254 the entire match  has a fast traversal climb.  
+67,5728,blue,[7|7|12|7|12|18],['u'|'u'|'m'|'m'|'m'|'u'],0,True,0,False,0,28,0,Deeya,shooter based. 75% accuracy. slow. stopped working in the last quarter did not attempt climb 
+67,5458,red,[13|13],['l'|'l'],0,False,2,False,0,0,0,Charlie,played defense the entire game  was decent at it. definitely not the best  as it wandered around mindlessly for most of the time  but had a good point where they cornered a bot for a while 
+68,7539,blue,[],[],4,True,0,False,93,0,0,Brendon Hayes,Spent the entire time climbing - Spider-Man robot  
+68,7539,blue,[12],['m'],4,True,1,False,72,0,0,lauriejin,after auton they just did climb .____. and it took the entire time for them to figure it out .__________. 
+68,299,blue,[8|13|13|13|13|8],['u'|'u'|'m'|'u'|'u'|'u'],0,True,1,False,0,0,0,ethan,close shot to upper next to hub 
+68,2367,red,[],[],0,True,0,False,0,64,43,Ada,Started out v fast and good at defense and pog. Then bricked then after that tried to shoot but the ball got stuck in the shooter. Overall assessment: somewhat unpogly but with potential  
+68,1160,blue,[18|18|7|2|2|7|7|3|3|9|9|12],['m'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'m'|'m'|'u'],2,True,2,False,21,0,0,Elena,accuracy isn't the best. cycle time is a bit long. robot may have bricked during climb 
+68,299,blue,[13|13|13|13|13],['u'|'u'|'u'|'u'|'u'],0,True,0,False,0,1,0,Deeya,shooter based. 95% accuracy.slow. slowed down a lot in the last half. did not attempt climb. got targeted by red defense 
+68,7419,red,[8|3|12|12|9|9|12|12|7|7|7|7],['u'|'u'|'u'|'m'|'u'|'u'|'m'|'m'|'u'|'u'|'u'|'u'],3,False,1,False,17,0,0,Charlie,very unstable. loved doing friendly fire for some reason. not good at escaping/dealing with defense. climb was decent  probably could’ve made traversal if they had time 
+68,4643,red,[18|18|18|18|18],['m'|'m'|'m'|'u'|'m'],0,True,0,False,0,0,15,Saanvi,It missed the majority of its shots  did not attempt climb. played defense a little bit  but did it well. I think a piece broke off of the robot when it ran into the other bot 
+69,1072,blue,[18|18|17|7|3|3|18|18|7|7|14|14],['u'|'u'|'m'|'m'|'u'|'m'|'m'|'m'|'u'|'m'|'u'|'u'],4,True,3,False,16,0,0,ethan,
+69,8033,red,[7|7|3|3|2|2|11|11|12|12|18|2|2|4|4|7|7],['u'|'u'|'u'|'u'|'m'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'m'|'m'|'m'|'u'|'u'],2,False,2,False,15,0,0,Charlie,very fast  made a lot of shots but their accuracy was like 70% at best. climb was ok  
+69,1072,blue,[18|18|18|18|17|3|21|21|12|12|7|18|18|3|3|7|7|14|14],['u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'m'|'m'|'u'|'u'|'m'|'u'|'u'|'u'],4,True,5,False,15,0,0,Brendon Hayes,Awesome robot  was pressured the entire time by two robots and still made a lot of shots. Drivers are cracked with their maneuvers  
+69,7157,red,[18|12|18|7|7|18|18|18|18|14|14|3|3|18|18|18|18|3|3|12|12|12],['m'|'m'|'u'|'u'|'u'|'m'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'m'|'u'|'u'|'u'|'u'|'u'],2,False,22,False,12,0,0,Saanvi,Consistent shooting70 6918 blue [13|13|13|13|13|13|13] ['m'|'m'|'m'|'u'|'u'|'m'|'m'] 0 true 1 false 47 0 0 ethan got to traversal but fell. shot to upper next to goal but would not be at right angle or pop out 
+70,2204,red,[13|13|8|13|13|13|7|8|8],['m'|'l'|'m'|'l'|'l'|'l'|'l'|'l'|'l'],0,True,0,False,0,0,0,Saanvi,A very small bot  they only shot in the lower hub. Did not attempt climb 
+70,701,blue,[12|12|12|18|18|12|7|7|12|7|7|7|7|7|18],['u'|'u'|'u'|'u'|'m'|'u'|'m'|'u'|'u'|'u'|'u'|'m'|'m'|'u'|'u'],1,True,1,False,2,0,0,Brendon Hayes,Consistent cycles of upper  mostly accurate. Got low bar climb.  
+69,3257,red,[7],['u'],0,True,1,False,0,0,108,Elena,played pretty good defense against 1072 but overall felt like bot didn't contribute much to the alliance 
+70,701,blue,[7|7|18|18|7|7|12|7|12|12|12|12|12|18],['u'|'u'|'m'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'m'|'m'|'u'|'u'],1,True,0,False,5,0,0,Elena,good accuracy consistent. made good call to aim for low rung 
+70,6662,red,[12|7],['m'|'m'],0,False,0,False,0,7,0,Charlie,slow  choppy movements. had no convenient way of picking up balls  had to rely on human supplier. seemed like it was running out of battery the whole time. shots were very weak. did not attempt climb 
+70,6918,blue,[13|13|13|13|13|13|13|13],['m'|'m'|'m'|'u'|'u'|'u'|'u'|'m'],0,True,1,False,47,0,0,Deeya,shooter based. 75% accuracy. Moderately paced. worked all game attempted climb *climbed all the way to traversal and had a really bad fall from about 5ft :( 
+71,1678,red,[18|12|12|12|12|19|19|7|7|2|2|7|7],['u'|'u'|'u'|'u'|'m'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'],0,True,5,False,0,58,0,ethan,scoring well then bricked at the end 
+71,7667,red,[7|12|7],['u'|'u'|'u'],0,True,0,False,0,0,0,Ada,Intake sucks  
+71,1662,blue,[7|7|7|12|12|12|18|18|18],['m'|'u'|'u'|'u'|'m'|'u'|'u'|'u'|'u'],2,True,1,False,15,0,0,Elena,decent accuracy and speed. 1678 bricked so blue alliance won 
+71,3598,red,[8|8],['l'|'m'],0,True,2,False,0,31,52,Saanvi,Very top-heavy  it tried to defend but wasn't very good 
+71,1678,red,[17|17|17|18|18|14|14|11|11|6|6|7|7|7],['u'|'u'|'u'|'u'|'m'|'u'|'u'|'u'|'m'|'u'|'u'|'u'|'u'|'u'],0,False,5,False,0,55,0,Charlie,good accuracy  quite fast. got bricked in the last half. did not attempt climb  
+71,1662,blue,[7|7|7|12|18|7|7|12|18|18],['m'|'u'|'u'|'u'|'u'|'u'|'m'|'u'|'u'|'u'],2,True,1,False,17,0,0,Brendon Hayes,Consistent uppers  intake has to be precise but the drivers have practiced. Can go middle bar  maybe higher 
+71,4904,blue,[17],['m'],0,True,0,False,0,2,85,Deeya,defense based. 20% accuracy. fast. moved around in the last quarter but didnt do anything. did not attempt climb. *very aggressive  
+72,5274,red,[13|18|13|18|13|3],['m'|'u'|'u'|'u'|'m'|'u'],0,True,1,False,0,0,0,Elena,pretty bad accuracy. would accidentally release ball. didn't attempt climb 
+72,5274,red,[12|12|18|18|12|3],['m'|'u'|'u'|'u'|'m'|'u'],0,True,1,False,0,0,10,ethan,uses rubber band for intake a bit unreliable. only shot one at a time but good arc 
+72,2035,red,[7|7|7|8|13],['u'|'m'|'m'|'u'|'u'],2,False,1,False,2,0,0,Charlie,slow  choppy movements. had a hard time picking up/keeping the ball. did not do well against defense. climbed to mid. not exactly aggressive but still made shots 
+72,1458,blue,[],[],0,True,0,False,0,29,55,Deeya,defense based. 50% accuracy. fast  good drift. stopped working in 2nd quarter but came back third quarter. did not attempt climb. *not aggressive but good at distracting  
+72,1458,blue,[],[],0,True,0,False,0,6,0,lauriejin,"another smol freshman bot. played defense the entire time except it wasnt defense it was like ""hi uwu can i block u hehe uwu im shy :3"" they were like scared to touch the bot till v end "
+72,2288,red,[13|13|13|13|8|8],['l'|'l'|'l'|'m'|'l'|'l'],2,True,1,False,13,0,0,Saanvi,Other alliance defended aggressively. idk if all the shots inputted because scouting app is weird - I made a mistake & clicked undo but it un-greyed the entire area  so id if it then miscounted 
+73,7539,blue,[],[],1,True,0,False,93,0,0,ethan,went for climb after auton  hook failed and climbed low 
+73,8091,red,[8],['m'],0,True,1,False,0,91,0,chiling,bad team don’t partner; intake broke; drive team kept bumping into others 
+73,5458,blue,[13|13|8|8|14|14|13|13],['l'|'l'|'l'|'l'|'l'|'l'|'m'|'l'],2,True,2,False,5,0,0,Sophia,Slipped off climb initially 
+73,3669,red,[],[],4,False,0,False,37,0,2,Charlie,attempted defense but was bad at it. very slow  barely did anything. slow climb  but made it to the traversal anyway. made no shots 
+73,7539,blue,[],[],1,True,0,False,92,0,0,Ada,Spent the entire match trying to climb and failed so they just went and climbed low but then their spidery hooks ended up getting in the way of their alliance partner trying to climb mid 
+74,1072,blue,[18|18|17|18|18|7|7|18|3],['u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'],4,True,3,False,23,0,0,Sophia,1072 supremacy 
+74,8048,red,[8],['l'],0,True,1,False,0,0,72,chiling,defended for entire teleop period; fairly successful; drive team great job 
+74,7157,red,[18|18|18|7|7|18|18|7|7|7|7|7|7|18|18|18|18|3|3|7|7|14|14|14|14|18|18|18|18],['u'|'u'|'u'|'u'|'m'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'m'|'u'|'u'|'u'|'u'|'u'|'m'|'m'|'m'|'m'|'m'|'u'|'u'|'m'|'m'|'u'|'m'],2,True,4,False,18,0,0,ethan,4 in auton missed a lot 
+74,751,red,[7|7|7|3],['u'|'u'|'u'|'m'],0,False,1,False,0,0,0,Charlie,very unstable  low accuracy. did not attempt climb. mostly shooting 
+75,8033,blue,[18|18|17|17|18|18|7|7|7|7|7|3|12|12|12|7],['u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'m'|'u'|'u'|'u'|'u'|'m'|'u'|'m'],0,True,2,False,6,0,0,Sophia,Fell from climb and I think the climber snapped 
+75,1836,red,[],[],4,True,0,False,31,0,0,Kabir,Didn’t intake anything  defense bot but not really that great and sometimes played defense against own team  started climb at 70 seconds left.  
+75,8020,red,[7|7|2|2|4|4|7],['u'|'u'|'u'|'m'|'u'|'m'|'m'],2,True,2,False,24,0,0,ethan,good long range single shot but sometimes fell out. prob could have climbed higher but blocked by other unbalanced bot 
+75,1836,red,[13],['l'],4,True,1,False,28,0,2,chiling,didn’t intake any balls; drivers were bumping into alliance partner’s robot; held onto traversal with one hook 
+75,299,red,[18|13|13|8|8],['l'|'u'|'u'|'u'|'u'],0,False,1,False,0,0,3,Charlie,slow and confusing movements. mainly shooter  but also attempted some defense (was ok at it). did not attempt climb. mediocre accuracy  
