@@ -495,3 +495,4 @@ matchNum,teamNum,teamColor,locations,outcomes,climbLevel,initLinePassed,autonCou
 75,8020,red,[7|7|2|2|4|4|7],['u'|'u'|'u'|'m'|'u'|'m'|'m'],2,True,2,False,24,0,0,ethan,good long range single shot but sometimes fell out. prob could have climbed higher but blocked by other unbalanced bot 
 75,1836,red,[13],['l'],4,True,1,False,28,0,2,chiling,didn’t intake any balls; drivers were bumping into alliance partner’s robot; held onto traversal with one hook 
 75,299,red,[18|13|13|8|8],['l'|'u'|'u'|'u'|'u'],0,False,1,False,0,0,3,Charlie,slow and confusing movements. mainly shooter  but also attempted some defense (was ok at it). did not attempt climb. mediocre accuracy  
+76,5419,red,[12|12],['u'|'m'],3,False,2,False,24,0,99,Charlie,mained defense  was mediocre at it. did manage to corner other teams not for a couple seconds though. spent most of the time chasing around other bots. did well on climb 
