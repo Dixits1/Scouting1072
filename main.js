@@ -2,7 +2,8 @@
 
 // TODOs:
 // show team numbers as options pulled from TBA instead of user-entered text
-// delete any commas and new-lines from commemnts
+// delete any commas and new-lines from comments
+// fix ||| bug
 
 // add reset button to climb time
 // auto-start climb timer when page is opened
