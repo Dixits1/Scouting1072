@@ -38,7 +38,7 @@ matchNum,teamNum,teamColor,locations,outcomes,climbLevel,initLinePassed,autonCou
 9,1072,red,[4|4|4|14|14|4|9|4|4|4|14|14|9|9|9|9|9|9],['u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'|'u'],0,True,10,True,20,0,0,Kabir, Great robot!!! 
 9,6619,blue,[8|8|8|8|8|8],['l'|'l'|'m'|'l'|'l'|'l'],0,True,0,False,0,0,0,sania gupta,scored two balls at once in lower hub 
 9,2035,blue,[12|7|7|12|12|12|17|12|12|7|7],['m'|'m'|'u'|'m'|'u'|'m'|'m'|'m'|'u'|'u'|'u'],2,True,1,False,5,6,0,Akul,Very slow  lots of spin on ball  many misses 
-9,6981,blue,,[],0,False,0,False,0,60,0,Sathvik Chundru,Did not do anything the whole match Moved backwards and forwards the whole time very slightly  
+9,6981,blue,[],[],0,False,0,False,0,60,0,Sathvik Chundru,Did not do anything the whole match Moved backwards and forwards the whole time very slightly  
 9,1662,red,[7|2|2|3|7|7|12|7],['m'|'u'|'u'|'m'|'u'|'u'|'m'|'m'],2,True,1,False,26,0,0,ethan,
 9,8048,red,[8|8|8|13|13|13|8],['l'|'m'|'l'|'l'|'l'|'l'|'m'],0,True,1,False,0,0,120,Deeya,ran into our robot  DNP  picked up two  usually got only 1 in  aggressive 
 9,1662,red,[7|2|2|3|7|7|7],['u'|'u'|'u'|'m'|'u'|'u'|'m'],3,True,1,False,6,0,3,Sophia Z,
