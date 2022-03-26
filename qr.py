@@ -6,6 +6,8 @@ import os
 # TODO:
 # - fix bug where scanner fails upon seeing a new QR code while there is an unfinished QR code being scanned 
 #   that has not already been completely scanned
+# - make an actual interface so that it can be used by other ppl
+# - package into an app usable by anyone w a mac
 
 cap = cv2.VideoCapture(0)
 # initialize the cv2 QRCode detector

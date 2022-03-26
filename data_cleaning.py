@@ -1,3 +1,4 @@
+from ast import Pass
 import csv
 import pandas as pd
 from io import StringIO
@@ -65,3 +66,8 @@ df = df.drop(df.columns[-1], axis=1)
             # else, print "scouted team color not matching actual team color for some reason...."
 #   else, print "team not found in match #"
 
+def getSchedule(eventCode):
+    # send a GET request to "https://www.thebluealliance.com/api/v3/event/" + eventCode + "/matches/simple"
+    # with a header of "X-TBA-Auth-Key" and the authKey
+
+    pass
