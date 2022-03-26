@@ -33,7 +33,7 @@ def flipLocations(locStr):
     locStr = locStr[1:-1]
 
     if locStr == "":
-        return locStr
+        return "[]"
     
     # split by "|"
     locs = locStr.split("|")
