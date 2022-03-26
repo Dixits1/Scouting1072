@@ -57,13 +57,15 @@ def flipLocations(locStr):
 
 
 for line in lines:
+    line = line.replace('|||', '|')
+    line = line.replace('||', '|')
+
     # split line into pieces by commas
     pieces = line.split(',')
     new_pieces = []
 
-    # TODO: remove once jank bug is fixed
-    pieces[3].replace('|||', '|')
-    pieces[4].replace('|||', '|')
+    if pieces[3].count('|') != pieces[4].count('|'):
+        print("faulty line: " + line)
 
     # for the first 13 elements of pieces, store in new_pieces. for all elements in pieces after the 13th element, 
     # combine into 1 string and store a the end of new_pieces
@@ -145,7 +147,6 @@ for index, df_row in df.iterrows():
     else:
         print("team not found in match")
         print(df_row)
-
 
 # write df to a new file called qr_cleaned.csv
 df.to_csv('qr_cleaned.csv', index=False)
