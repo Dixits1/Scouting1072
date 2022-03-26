@@ -2,6 +2,11 @@ from ast import Pass
 import csv
 import pandas as pd
 from io import StringIO
+import requests
+
+EVENT_CODE = "2022cada"
+API_KEY = "oa9Mt34ilcOT2f6R5hlRSxKlkLWknCzXhyQOxHkn8gmtHtR69BNtCL1TSz7iQIUA"
+COLS = ["matchNum", "teamNum", "teamColor", "locations", "outcomes", "climbLevel", "initLinePassed", "autonCount", "humanPlayerScored", "climbTime", "brickTime", "defenseTime", "scouterName", "comments"]
 
 # read in qr_backup.csv as txt file
 f = open('qr.csv', 'r')
@@ -10,6 +15,17 @@ f = open('qr.csv', 'r')
 lines = f.readlines()
 
 new_lines = []
+
+
+def getSchedule():
+    # send a GET request to "https://www.thebluealliance.com/api/v3/event/" + eventCode + "/matches/simple"
+    # with a header of "X-TBA-Auth-Key" and the authKey
+
+    req = requests.get(url = "https://www.thebluealliance.com/api/v3/event/" + EVENT_CODE + "/matches/simple", headers = {"X-TBA-Auth-Key": API_KEY}) 
+
+    return req.json()
+
+
 
 for line in lines:
     # split line into pieces by commas
@@ -48,13 +64,12 @@ with open('qr_cleaned.csv', 'w') as f:
 
 csv_cleaned = StringIO(new_lines_str)
 
-df = pd.read_csv(csv_cleaned, sep=",")
+df = pd.read_csv(csv_cleaned, sep=",", names=COLS)
 
-# remove the last column
-df = df.drop(df.columns[-1], axis=1)
-
-# iterate over the rows.
-# for each row:
+# iterate over rows in df and store the dataframe df's row in a variable called df_row
+for index, df_row in df.iterrows():
+    # getSchedule()
+    
 #   get match #
 #   get red alliance and blue alliance teams from match #
 #   if either alliance contains the specified team #, then do the following:
@@ -66,8 +81,53 @@ df = df.drop(df.columns[-1], axis=1)
             # else, print "scouted team color not matching actual team color for some reason...."
 #   else, print "team not found in match #"
 
-def getSchedule(eventCode):
-    # send a GET request to "https://www.thebluealliance.com/api/v3/event/" + eventCode + "/matches/simple"
-    # with a header of "X-TBA-Auth-Key" and the authKey
-
     pass
+
+
+# print(df['scouterName'].value_counts())
+
+
+# for index, df_row in df.iterrows():
+#     # get match #
+#     match_num = df_row["matchNum"]
+
+#     # # get red alliance and blue alliance teams from match #
+#     req = requests.get(url = "https://www.thebluealliance.com/api/v3/event/" + EVENT_CODE + "/match/" + match_num + "/alliances", headers = {"X-TBA-Auth-Key": API_KEY}) 
+#     matches = req.json()
+
+#     alliances = None
+    
+#     for match in matches:
+#         if match.key == EVENT_CODE + "_qm" + match_num:
+            
+
+#     blueTeams = all
+
+    # red_teams = []
+    # blue_teams = []
+
+    # for alliance in alliance_data:
+    #     if alliance["alliance_color"] == "red":
+    #         for team in alliance["picks"]:
+    #             red_teams.append(team)
+    #     else:
+    #         for team in alliance["picks"]:
+    #             blue_teams.append(team)
+
+    # print(red_teams)
+    # print(blue_teams)
+
+    # # if either alliance contains the specified team #, then do the following:
+    # if any(team == "frc" + str(df_row["teamNum"]) for team in red_teams) or any(team == "frc" + str(df_row["teamNum"]) for team in blue_teams):
+    #     # if it scouted team color is N/A, then do the following:
+    #     if df_row["teamColor"] == "N/A":
+    #         # if the team color is blue, the flip all of the location scouting data and set team color to blue
+    #         if df_row["teamColor"] == "blue":
+    #             # flip all of the location scouting data
+    #             df.loc[index, "locations"] = df.loc[index, "locations"].replace("R", "L")
+    #             df.loc[index, "locations"] = df.loc[index, "locations"].replace("L", "R")
+    #             df.loc[index, "locations"] = df.loc[index, "locations"].replace("C", "C")
+
+    #             # set team color to blue
+    #             df.loc[index, "teamColor"] = "blue"
+    #         # else, if
