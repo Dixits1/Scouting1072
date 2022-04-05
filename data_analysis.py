@@ -82,32 +82,32 @@ def shotAttemptsAnalysis(teamData):
         plt.title(str(team) + " Shot Count Frequencies")
         plt.show()
 
-# def shootingPctAnalysis(teamData):
-#     matches = teamData["outcomes"].to_numpy()
-#     matchNums = teamData["matchNum"].to_numpy()
-#     lens = []
-#     matchDict = {}
+def shootingPctAnalysis(teamData):
+    matches = teamData["outcomes"].to_numpy()
+    matchNums = teamData["matchNum"].to_numpy()
+    pcts = []
+    matchDict = {}
 
-#     for m in range(len(matches)):
-#         outsStr = matches[m][1:-1]
-#         outs = [outs[1: -1] for outs in outsStr.split("|")]
-#         matchNum = matchNums[m]
-
-#         # check if the dictionary contains a key of matchNum
-#         #   if it does, append the length of locs to the list
+    for m in range(len(matches)):
+        outsStr = matches[m][1:-1]
+        outs = [outs[1: -1] for outs in outsStr.split("|")]
+        matchNum = matchNums[m]
         
-#         if matchNum in matchDict:
-#             matchDict[matchNum].append(1.0 - (outs.count('m') * 1.0)/len(outs))
-#         else:
-#             matchDict[matchNum] = [len(1.0 - (outs.count('m') * 1.0)/len(outs))]
+        if matchNum in matchDict:
+            matchDict[matchNum].append(1.0 - (outs.count('m') * 1.0)/len(outs))
+        else:
+            matchDict[matchNum] = [(1.0 - (outs.count('m') * 1.0)/len(outs))]
 
-#     for key in matchDict:
-#         lens.append(int(np.mean(matchDict[key])))
+    for key in matchDict:
+        pcts.append(np.mean(matchDict[key]))
 
-#     print("Mean Shots Taken: " + str(round(np.mean(lens), 2)) + " Std Dev.: " + str(round(np.std(lens), 2)))
+    print("Mean Shooting Pct: " + str(round(np.mean(pcts) * 100, 2)) + "% Std Dev.: " + str(round(np.std(pcts) * 100, 2)) + "%")
 
 
-alliances = getAlliances(matchNum)
+# alliances = getAlliances(matchNum)
+
+alliances = ([1072, 5419, 687], [1678, 254, 5458])
+
 
 teams = alliances[0] + alliances[1]
 
@@ -127,3 +127,4 @@ for teams in alliances:
         # commentsAnalysis(teamData)
         # climbFreqAnalysis(teamData)
         shotAttemptsAnalysis(teamData)
+        shootingPctAnalysis(teamData)
